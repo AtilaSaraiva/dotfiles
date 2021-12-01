@@ -1,0 +1,14 @@
+#!/usr/bin/zsh
+
+backupDirList=$HOME/.dotfiles/backupdir
+#for dir in $(cat $backupDirList); do
+    #echo $dir
+    ##cd $dir
+    ##duplicacy backup
+#done
+while IFS='' read -r LINE || [ -n "${LINE}" ]; do
+    echo "processing line: ${LINE}"
+    cd $LINE
+    duplicacy backup
+    duplicacy prune -keep 7:4
+done < $backupDirList

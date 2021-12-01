@@ -1,0 +1,192 @@
+#!/usr/bin/env sh
+
+#
+# Shell common environment variables and functions (BusyBox compatible)
+#
+
+
+# Nvidia
+export NVARCH=`uname -s`_`uname -m`; export NVARCH
+export NVCOMPILERS=$HOME/gitRepos/hpc_sdk; export NVCOMPILERS
+export MANPATH=$MANPATH:$NVCOMPILERS/$NVARCH/21.3/compilers/man; export MANPATH
+export PATH=$NVCOMPILERS/$NVARCH/2021/compilers/bin:$PATH; export PATH
+export PATH=$NVCOMPILERS/$NVARCH/2021/comm_libs/mpi/bin:$PATH
+export PATH=$NVCOMPILERS/$NVARCH/2021/cuda/bin:$PATH
+export MANPATH=$MANPATH:$NVCOMPILERS/$NVARCH/21.3/comm_libs/mpi/man
+
+export GITHUB_PRIVATE_NAME='AtilaSaraiva'
+export GITHUB_PRIVATE_EMAIL='atilasaraiva@gmail.com'
+
+export GITHUB_WORK_NAME='atilaTrackfy'
+export GITHUB_WORK_EMAIL='atila.soares@trackfyapp.com'
+
+
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+export XDG_CURRENT_DESKTOP=sway
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_TYPE=${XDG_DATA_HOME:="$HOME/.cache"}
+export XDG_CONFIG_TYPE=${XDG_CONFIG_HOME:="$HOME/.config"}
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
+export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
+
+export GEM_HOME="$XDG_DATA_HOME"/gem
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
+export DOT_SAGE="$XDG_CONFIG_HOME"/sage
+
+
+export CWPROOT=~/.cwp
+export DATAPATH=~/tmp/
+
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$HOME/Códigos/ComputeCpp/lib:$LD_LIBRARY_PATH
+export SYSTEMD_EDITOR=nvim
+export FDCT=~/.CurveLab
+export FFTW=/home/atila/opt/fftw-2.1.5
+export PGI=~/pgi;
+
+export MANPATH=$MANPATH:~/pgi/linux86-64/19.4/man;
+export LM_LICENSE_FILE=$LM_LICENSE_FILE:~/pgi/license.dat;
+export SYSTEMD_EDITOR="nvim"
+export RPROMPT=''
+
+export WORKON_HOME=~/.virtualenvs
+
+export OPENER="xdg-open"
+export EDITOR="nvim"
+export VISUAL="nvim"
+export PAGER="less"
+export TERMINAL="alacritty"
+#export FILEBROWSER="vifm_ueberzug"
+export FILEBROWSER="lf"
+export VIDEOPLAYER="mpv"
+#export BROWSER="qutebrowser"
+export ALTBROWSER="firefox"
+export TRUEBROWSER="qutebrowser"
+export MAIL="$HOME/.local/share/mail/main"  # mutt
+export READER="zathura"
+export SCREENSHOTS="$HOME/pictures/screenshots"
+export WALLPAPERS="$HOME/pictures/wallpapers"
+export XIMAGEVIEWER="sxiv"
+export WEBCAM="/dev/video0"
+export SXHKD_FIFO=/tmp/sxhkd-fifo
+export DMENU=dmenu
+#export MPLBACKEND=module://my_backend
+
+export CAMOBI="10.129.64.41"
+
+export INIT=$HOME/.config/nvim/init.vim
+
+# Program-specific
+export CALIBRE_USE_SYSTEM_THEME=1
+
+# my preferences
+export AURMANAGER="yay"
+#export PODCASTS_RSS_FILE="$HOME/.config/mpd/podcasts_rss"
+
+# android sdk (for flutter)
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export CHROME_EXECUTABLE=google-chrome-stable
+
+direnv() {  # environment variable name, path creation
+    export "$1"="$2"
+    mkdir -p "$2"
+}
+
+# Get out of my $HOME!
+#direnv CCACHE_BASEDIR "$HOME/.cache/ccache"
+#export CCACHE_CONFIGPATH="$HOME/.config/ccache.conf"
+#direnv GNUPGHOME "$HOME/.config/gnupg"
+#direnv GOPATH "$HOME/.cache/go"
+#export INPUTRC="$HOME/.config/inputrc"
+#export LESSHISTFILE="$HOME/.cache/lesshst"
+#direnv npm_config_cache "$HOME/.cache/npm"
+#export XRESOURCES=$HOME/.config/Xresources/main
+#export PYTHONSTARTUP="$HOME/.config/pythonstartup.py"
+#export SQLITE_HISTFILE="$HOME/.cache/sqlite_history"
+#export MYVIMRC="$HOME/.config/vim/vimrc"
+#export VIMINIT="source $MYVIMRC"
+#direnv WINEPREFIX "$HOME/.local/share/wineprefix/default"
+#export TASKRC="$HOME/.config/taskrc"
+#direnv TASKDATA "$HOME/.config/task"
+#direnv TIMEWARRIORDB "$HOME/.config/timewarrior"
+#export XAUTHORITY="$HOME/.config/Xauthority"  # seems not to work with lightdm
+
+# And for the rest, see aliases
+direnv JUNKHOME "$HOME/.cache/junkhome"
+
+# For software that did not understand that XDG variables have defaults
+#direnv XDG_DATA_HOME "$HOME/.local/share"
+#direnv XDG_CONFIG_HOME "$HOME/.config"
+#export XDG_DATA_DIRS="/usr/local/share/:/usr/share/"
+#export XDG_CONFIG_DIRS="/etc/xdg"
+#direnv XDG_CACHE_HOME "$HOME/.cache"
+#direnv XDG_RUNTIME_DIR "$HOME/.local/run"
+#chmod 0700 "$XDG_RUNTIME_DIR"
+
+
+
+# $PATH
+
+# Function stolen from Arch Linux /etc/profile
+appendpath() {
+    if [ ! -d "$1" ]; then
+        return
+    fi
+    case ":$PATH:" in
+        *:"$1":*) ;;
+        *) export PATH="${PATH:+$PATH:}$1" ;;
+    esac
+}
+
+prependpath() {
+    if [ ! -d "$1" ]; then
+        return
+    fi
+    case ":$PATH:" in
+        *:"$1":*) ;;
+        *) export PATH="$1${PATH:+:$PATH}" ;;
+    esac
+}
+
+prependpath "$HOME/.local/bin"
+prependpath "$HOME/.bin"
+prependpath "$HOME/.config/polybar/scripts"
+prependpath "$HOME/.cwp/bin"
+prependpath "$HOME/pgi/linux86-64/19.4/bin"
+prependpath "/opt/cuda/bin"
+prependpath "$HOME/.local/bin/polybar"
+prependpath "$HOME/.local/bin/i3bar"
+prependpath "$HOME/.local/bin/bspwm"
+prependpath "$HOME/.local/bin/menu"
+appendpath  "$HOME/.local/bin/cp-p"
+appendpath  "$HOME/.local/bin/podcast2playlist"
+appendpath  "$HOME/.local/bin/file_managing"
+appendpath  "$HOME/.local/bin/emolog"
+appendpath  "$HOME/.local/bin/emolog"
+appendpath  "$HOME/Códigos/ComputeCpp/bin/"
+#appendpath  "$NVCOMPILERS/$NVARCH/20.7/compilers/bin"
+#appendpath  "NVCOMPILERS/$NVARCH/20.7/comm_libs/mpi/bin"
+
+# python virtualenvwrapper
+direnv WORKON_HOME "$HOME/.local/lib/pipenvs/"
+#export PIP_REQUIRE_VIRTUALENV=false
+
+# Seimic Unix
+export CWPROOT=/opt/SeisUnix
+appendpath "$CWPROOT/bin"
+
+
+trysource() {
+    if [ -f "$1" ]
+    then
+        . "$1"
+    else
+        return 1
+    fi
+}
+
+trysource ./lf_icons

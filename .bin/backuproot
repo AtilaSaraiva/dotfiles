@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+
+prefix="/run/media/atila/WD\ My\ Passport"
+
+doas sh -c "rsync -aAXHv --delete --exclude={'/dev/*','/proc/*','/sys/*','/tmp/*','/run/*','/mnt/*','/media/*','/lost+found','/home/*','/var/cache/pacman/*'} --info=progress2 / $prefix/rootBackup"

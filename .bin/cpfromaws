@@ -1,0 +1,2 @@
+#!/bin/bash
+scp -i "~/nina.pem" -r ubuntu@ec2-18-231-168-254.sa-east-1.compute.amazonaws.com:~/$1 $2

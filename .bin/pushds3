@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+
+cp "/home/atila/.steam/steam/steamapps/compatdata/374320/pfx/drive_c/users/steamuser/Application Data/DarkSoulsIII/0110000105d10959/DS30000.sl2" "/mnt/w10/Users/Átila/AppData/Roaming/DarkSoulsIII/0110000105d10959/DS30000.sl2"
+
+cd "/home/atila/.steam/steam/steamapps/compatdata/374320/pfx/drive_c/users/steamuser/Application Data/DarkSoulsIII/0110000105d10959"
+
+git add *
+git commit -m "Pushing save to w10: $date"

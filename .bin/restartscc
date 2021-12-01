@@ -1,0 +1,4 @@
+#!/usr/bin/zsh
+
+scc-daemon start &
+scc-daemon restart

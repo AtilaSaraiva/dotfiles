@@ -1,0 +1,66 @@
+HDMI-A-1 HDMI-A-0 Height 1920x1080=1016
+HDMI-A-1 HDMI-A-0 Width 1920x1080=943
+HDMI-A-1 HDMI-A-0 XPosition 1920x1080=2885
+HDMI-A-1 HDMI-A-0 YPosition 1920x1080=52
+State=AAAA/wAAAAD9AAAAAAAAA68AAAO4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+
+[Desktop Entry]
+FullScreen=false
+shouldShowMenuBarComingFromFullScreen=true
+shouldShowToolBarComingFromFullScreen=false
+
+[MainWindow]
+DVI-D-0 HDMI-0 Height 1080=1080
+DVI-D-0 HDMI-0 Width 1920=1920
+DVI-D-0 HDMI-0 XPosition=1920
+DVI-D-0 HDMI-0 YPosition=0
+HDMI-A-1 HDMI-A-0 Height 1080=1080
+HDMI-A-1 HDMI-A-0 Height 1920x1080=996
+HDMI-A-1 HDMI-A-0 Width 1920=1920
+HDMI-A-1 HDMI-A-0 Width 1920x1080=1896
+HDMI-A-1 HDMI-A-0 XPosition=1920
+HDMI-A-1 HDMI-A-0 XPosition 1920x1080=1932
+HDMI-A-1 HDMI-A-0 YPosition=0
+HDMI-A-1 HDMI-A-0 YPosition 1920x1080=72
+HDMI-A-1 HDMI-A-2 Height 1920x1080=1080
+HDMI-A-1 HDMI-A-2 Width 1920x1080=1920
+HDMI-A-1 Height 1080=505
+HDMI-A-1 Height 1920x1080=1036
+HDMI-A-1 Width 1920=945
+HDMI-A-1 Width 1920x1080=1896
+HDMI-A-1 XPosition=10
+HDMI-A-1 XPosition 1920x1080=12
+HDMI-A-1 YPosition=565
+HDMI-A-1 YPosition 1920x1080=72
+HDMI-A-2 HDMI-A-1 Height 1920x1080=1080
+HDMI-A-2 HDMI-A-1 Width 1920x1080=1920
+HDMI-A-2 HDMI-A-1 Window-Maximized 1920x1080=true
+HDMI-A-2 Height 1920x1080=1080
+HDMI-A-2 Width 1920x1080=1920
+HDMI-A-2 Window-Maximized 1920x1080=true
+Height 1080=1014
+State=AAAA/wAAAAD9AAAAAAAAAa0AAAG4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+Width 1920=943
+
+[Recent Files]
+File1[$e]=$HOME/Dropbox/Projetos/mestrado/geoftese/tese.pdf
+File10[$e]=$HOME/Documentos/1997-19.pdf
+File2[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/atila-tese18-11.pdf
+File3[$e]=$HOME/Documentos/tccmarcosCorrection.pdf
+File4[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese-correçãoPrópria.pdf
+File5[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese-correçãoPrópria2.pdf
+File6[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese.pdf
+File7[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/Atila-27-tese.pdf
+File8[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/1-paperCorrigido.pdf
+File9[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/Atila-paper.pdf
+Name1[$e]=tese.pdf
+Name10[$e]=1997-19.pdf
+Name2[$e]=atila-tese18-11.pdf
+Name3[$e]=tccmarcosCorrection.pdf
+Name4[$e]=tese-correçãoPrópria.pdf
+Name5[$e]=tese-correçãoPrópria2.pdf
+Name6[$e]=tese.pdf
+Name7[$e]=Atila-27-tese.pdf
+Name8[$e]=1-paperCorrigido.pdf
+Name9[$e]=Atila-paper.pdf

@@ -1,0 +1,19 @@
+#!/bin/zsh
+#workspace=$(i3-msg -t get_workspaces \
+  #| jq '.[] | select(.focused==true).name' \
+  #| cut -d"\"" -f2)
+
+#echo $workspace
+#i3-msg "assign [class='Inkscape'] $workspace; exec inkscape"
+#i3-msg k
+
+activeworkspace=$(i3-msg -t get_workspaces | jq -c '.[] | select(.focused) | .name' --raw-output)
+inkscape &
+windowname=inkscape
+xprop -spy -root _NET_ACTIVE_WINDOW | \
+  while read line ; do
+      if xprop WM_CLASS -id ${line##* } | grep -q $windowname ; then
+	  i3-msg move "[con_id=\"${line##* }\"]" $activeworkspace
+	  exit
+      fi
+  done

@@ -1,0 +1,3 @@
+#!/bin/zsh
+pullmarreca LSRTM_GPU_proj /home/atila/mestrado/Códigos/
+#pullmarreca tmp /home/atila/

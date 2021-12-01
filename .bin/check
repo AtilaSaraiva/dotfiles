@@ -1,0 +1,3 @@
+#!/usr/bin/zsh
+
+pacman -Qql $1 | grep -Fe .service -e .socket

@@ -1,0 +1,10 @@
+[Unit]
+Description=A service to allow for battlefield 4 to have ping
+
+[Service]
+Type=simple
+ExecStart=/home/atila/.bin/bf4ping
+User=atila
+
+[Install]
+WantedBy=multi-user.target

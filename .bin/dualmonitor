@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+
+sh ~/.screenlayout/default.sh
+sh ~/.xprofile
+sh ~/.config/polybar/launch.sh

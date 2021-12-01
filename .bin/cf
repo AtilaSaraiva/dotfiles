@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "program $1
+    implicit none
+    integer,parameter:: dp = kind(0.d0)
+end program $1" > $1.f95

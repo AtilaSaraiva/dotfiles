@@ -1,0 +1,15 @@
+#!/usr/bin/zsh
+
+session=$(echo $XDG_SESSION_TYPE)
+if [[ $session == "x11" ]];then
+    clipboard=$(xsel -b)
+else
+    clipboard=$(wl-paste)
+fi
+tags=$(rofi -dmenu -p 'tags' -font "Fantasque Sans Mono 20")
+if test -n "$tags" && test -n "$clipboard"
+then
+    buku -a $clipboard $tags
+    notify-send "Bookmarked URL
+    $clipboard"
+fi

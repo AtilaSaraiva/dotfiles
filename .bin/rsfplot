@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sfgrey gainpanel=a mean=y scalebar=y <$1 | jpegpen format=jpg | display

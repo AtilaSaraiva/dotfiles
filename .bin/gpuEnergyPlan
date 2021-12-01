@@ -1,0 +1,4 @@
+#!/usr/bin/zsh
+
+#sh -c "echo '$1' > /sys/devices/pci0000:00/0000:00:02.0/0000:01:00.0/drm/card0/device/power_dpm_state"
+sh -c "echo '$1' > /sys/devices/pci0000:00/0000:00:02.0/0000:01:00.0/drm/card0/device/power_dpm_force_performance_level"

@@ -1,0 +1,2 @@
+mkdir -p /tmp/marreca
+sshfs asqs@marreca.cpgg.intranet.ufba.br:/home/asqs/ /tmp/marreca/ -oHostKeyAlgorithms=+ssh-dss

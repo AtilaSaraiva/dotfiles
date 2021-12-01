@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+inputFold=$HOME/Documentos/Artigos
+outputFold=$HOME/Documentos/ArtigosComp
+
+cd $inputFold
+dirlist=$(find . -type d)
+
+echo $dirlist
+mkdir $outputFold
+cd $outputFold
+for folder in $dirlist; do
+    mkdir $folder
+done

@@ -1,0 +1,141 @@
+{
+    "modules-left": ["custom/menu", "custom/separator", "custom/files", "custom/browser",  "custom/music", "custom/geany", "custom/term"],
+    "modules-right": ["tray", "custom/separator", "sway/mode", "sway/workspaces", "custom/separator", "pulseaudio", "network", "custom/separator", "clock", "custom/separator", "custom/power"],
+
+    "position": "left", // Waybar position (top|bottom|left|right)
+    "width": 82,
+
+    // Modules configuration
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "custom/music":{
+        "format": "",
+        "on-click": "brave --app=https://youtube.com/",
+        "tooltip": false,
+      },
+    "custom/files":{
+        "format": "",
+        "on-click": "alacritty -e vifm",
+        "tooltip": false,
+      },
+
+    "custom/browser":{
+        "format": "",
+        "on-click": "qutebrowser",
+        "tooltip": false,
+      },
+    "custom/geany":{
+        "format": "",
+        "on-click": "code",
+        "tooltip": false,
+      },
+
+    "custom/power":{
+        "format": "⏻",
+        "on-click": "powermenu",
+        "tooltip": false,
+      },
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m}"
+      },
+    "custom/menu":{
+        "format": "",
+        "on-click": "rofi -show drun -show-icons -icon-theme 'Papirus-Dark'",
+        "tooltip": false,
+      },
+
+    "custom/separator":{
+        "format": "",
+        "tooltip": false,
+      },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+      },
+
+    "custom/term":{
+        "format": "",
+        "on-click": "alacritty",
+        "tooltip": false,
+      },
+
+     "sway/workspaces": {
+         "disable-scroll": false,
+         "current-only": false,
+         "disable-markup": true,
+         "disable-click": false,
+         "format": "{icon}",
+         "tooltip": false,
+         "format-icons": {
+             "1": "1",
+             "2": "2",
+             "3": "3",
+             "4": "4",
+             "5": "5",
+             "6": "6",
+             "7": "7",
+             "8": "8",
+             "9": "9",
+             "10": "10",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
+     "network": {
+        "format-wifi": "",
+        /* "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ", */
+        /* "format-linked": "{ifname} (No IP)  ", */
+        "format-disconnected": "⚠",
+        /* "format-alt": "{ifname}: {ipaddr}/{cidr}" */
+        "on-click": "alacritty --hold -e nmtui",
+        "tooltip": false,
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": " {volume}%\n {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        /*"format-source": "{volume}% ",*/
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["🔈", "🔉", "🔊"]
+        },
+        "on-click": "pavucontrol"
+    },
+    /*"pulseaudio": {*/
+        /*"format": "{icon}",*/
+        /*"format-bluetooth": "{volume}% {icon} {format_source}",*/
+        /*"format-bluetooth-muted": "   {format_source}",*/
+        /*"format-muted": "",*/
+        /*"format-source": "{volume}%  ",*/
+        /*"format-source-muted": " ",*/
+        /*"tooltip": false,*/
+        /*"format-icons": {*/
+            /*"headphone": "🎧",*/
+            /*"hands-free": "",*/
+            /*"headset": "",*/
+            /*"phone": "",*/
+            /*"portable": "",*/
+            /*"car": " ",*/
+            /*"default": ["🎧", "", ""]*/
+        /*},*/
+        /*"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",*/
+        /*"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",*/
+        /*"on-click-middle": "pavucontrol"*/
+    /*},*/
+       }

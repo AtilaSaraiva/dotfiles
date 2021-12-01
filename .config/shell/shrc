@@ -1,0 +1,116 @@
+#!/usr/bin/env sh
+
+#
+# Shell common aliases and customizations
+#
+
+## COMMAND CONFIGURATION
+
+alias githome="git config user.name $GITHUB_PRIVATE_NAME && git config user.email $GITHUB_PRIVATE_EMAIL"
+alias gitwork="git config user.name $GITHUB_WORK_NAME && git config user.email $GITHUB_WORK_EMAIL"
+
+
+
+# Completion for existing commands
+alias compress='tar c -I"pxz -9" -f'
+#alias ls='ls -h --color=auto'
+alias mkdir='mkdir -v'
+alias rmdir='rmdir -v'
+alias cp="cp -i"
+alias mv="mv -iv"
+alias free='free -h'
+alias df='df -h'
+alias du='du -h'
+alias shutdown='sudo shutdown'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+alias suspend='sudo systemctl suspend'
+alias mount='sudo mount'
+alias umount='sudo umount'
+alias unmount='sudo umount'
+alias halt='sudo halt'
+alias hipify='perl /home/atila/gitRepos/HIPIFY/bin/hipify-perl'
+alias cdda='i3-swallow cataclysm-tiles'
+alias is='i3-swallow'
+alias lz="ls --sort size -l --block-size=M"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotf/ --work-tree=$HOME"
+alias savedGames="/usr/bin/git --git-dir=$HOME/.savedGames/ --work-tree=$HOME"
+#alias sudo="doas"
+alias swayconfig="nvim ~/.config/sway/config"
+alias uptdotfiles="dotfiles commit -m 'whatever' && dotfiles push -u origin master"
+
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+alias ffplay='ffplay -hide_banner'
+alias activate='source bin/activate'
+alias b="buku --suggest"
+
+
+
+# ALIASES
+
+# Frequent mistakes
+alias please=sudo
+
+# Shortcuts for commonly used commands
+alias ll="ls -l"
+alias la="ls -la"
+alias s='sudo -s -E'
+alias x='startx'
+alias nx='nvidia-xrun'
+
+alias v="$EDITOR"
+#alias n="$FILEBROWSER"
+
+alias n="exec ~/.bin/vifm_ueber"
+alias updt="doas pacman -Sy && sudo powerpill -Su && yay -Su"
+alias pkg="doas pacman -Syu"
+alias termux="ssh -p 8022 192.168.1.5"
+
+# For programs that think $HOME is a reasonable place to put their junk
+# and don't allow the user to change those questionable choices
+alias adb='HOME=$JUNKHOME adb'
+alias audacity='HOME=$JUNKHOME audacity'
+alias binwalk='HOME=$JUNKHOME binwalk' # Should use .config according to the GitHub code though
+alias cabal='HOME=$JUNKHOME cabal' # TODO May have options but last time I tried it it crashed
+alias cmake='HOME=$JUNKHOME cmake'
+alias ddd='HOME=$JUNKHOME ddd'
+alias ghidra='HOME=$JUNKHOME ghidra'
+alias itch='HOME=$JUNKHOME itch'
+alias vd='HOME=$JUNKHOME vd'
+alias wpa_cli='HOME=$JUNKHOME wpa_cli'
+# TODO Maybe we can do something about node-gyp
+
+alias bower='bower --config.storage.packages=~/.cache/bower/packages --config.storage.registry=~/.cache/bower/registry --config.storage.links=~/.cache/bower/links'
+alias gdb='gdb -x $HOME/.config/gdbinit'
+alias iftop='iftop -c $HOME/.config/iftoprc'
+alias lmms='lmms --config $HOME/.config/lmmsrc.xml'
+alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
+
+alias marreca="ssh -Y -L 8000:localhost:8000 asqs@marreca.cpgg.intranet.ufba.br -oHostKeyAlgorithms=+ssh-dss"
+#alias raspzin="sshfs pi@192.168.0.12:/home/pi/Documents/trackfy/ /home/atila/Documentos/Trackfy/myrpi -C && TERM=xterm-256color ssh pi@192.168.0.12 -C -X"
+alias downAudio="youtube-dl -x --audio-format best --audio-quality 0"
+
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+## TODO ruby's gem when I find a use for it
+
+# FUNCTIONS
+trysource() {
+    if [ -f "$1" ]
+    then
+        . "$1"
+    else
+        return 1
+    fi
+}
+
+def() {
+    sdcv -n --utf8-output --color "$@" 2>&1 | \
+    fold --width=$(tput cols) | \
+    less -FRX
+    echo "+ $@" >> ~/Dropbox/Documentos\ Pessoais/dictionary.md
+}

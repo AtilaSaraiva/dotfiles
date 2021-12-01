@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+while IFS='' read -r LINE || [ -n "${LINE}" ]; do
+    echo "processing line: ${LINE}"
+    zpaq add $1 $LINE
+done < $2

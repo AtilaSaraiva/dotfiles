@@ -1,0 +1,4 @@
+#!/bin/zsh
+Xephyr -br -ac -noreset -screen 1920x1040 :1 &
+sleep 1
+DISPLAY=:1 i3 -c ~/.dotfiles/alti3conf

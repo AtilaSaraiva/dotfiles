@@ -1,0 +1,61 @@
+#!/bin/sh
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+
+export HOMETEST_DESKTOP=1
+export HOMETEST_USER=steam
+export HOMETEST_DESKTOP_USER=desktop
+export HOMETEST_DESKTOP_SESSION=gnome
+
+export MANGOHUD=1
+export MANGOHUD_CONFIG="no_display,toggle_hud=F3"
+
+# Add our bin directory with the set_hd_mode and dpkg-query replacement scripts
+export PATH=/usr/share/steamos-compositor-plus/bin:${PATH}
+
+set_hd_mode.sh >> $HOME/set_hd_mode.log
+
+export LD_PRELOAD=/usr/lib/libmodeswitch_inhibitor.so:/usr/lib32/libmodeswitch_inhibitor.so
+
+# Disable DPMS and screen blanking for now; it doesn't know about controller
+# or Steam remote control events right now
+xset -dpms
+xset s off
+
+if command -v start-pulseaudio-x11 > /dev/null; then
+	start-pulseaudio-x11 &
+fi
+
+if systemctl is-active --quiet bluetooth && command -v bluetoothctl > /dev/null; then
+	bluetoothctl power on
+fi
+
+CONFIG_PATH=${XDG_CONFIG_HOME:-$HOME/.config}
+CONFIG_FILE="$CONFIG_PATH/steamos-compositor-plus"
+
+STEAMCMD="steam -tenfoot -steamos -fulldesktopres"
+COMPOSITORCMD="steamcompmgr"
+if [ -f "$CONFIG_FILE" ]; then
+	source "$CONFIG_FILE"
+fi
+
+$COMPOSITORCMD &
+
+loadargb_cursor /usr/share/icons/steam/arrow.png
+
+# Workaround for Steam login issue while Steam client change propagates out of Beta
+touch ~/.steam/root/config/SteamAppData.vdf || true
+
+# Workaround for missing background when starting steam in big picture mode for the first time
+DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
+IMAGES_DIR="$DATA_HOME/Steam/tenfoot/resource/images"
+BOOTSTRAP_IMAGE="$IMAGES_DIR/bootstrapper.jpg"
+if [ ! -f "$BOOTSTRAP_IMAGE" ]; then
+	mkdir -p "$IMAGES_DIR"
+	cp /usr/share/pixmaps/steam-bootstrapper.jpg "$BOOTSTRAP_IMAGE"
+fi
+
+if command -v steam-tweaks > /dev/null; then
+	steam-tweaks
+fi
+
+$STEAMCMD

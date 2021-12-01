@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+backupDirList=$HOME/.dotfiles/backupdir
+while IFS='' read -r LINE || [ -n "${LINE}" ]; do
+    echo "processing line: ${LINE}"
+    kopia snapshot create $LINE
+done < $backupDirList
+
+kopia repository sync-to filesystem --path /mnt/WinDisk/@kopiaDB --delete

@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+fullfile=$1
+filename=$(basename -- "$fullfile")
+extension="${filename##*.}"
+cropped="${filename%.*}_cropped.pdf"
+k2pdfopt="${filename%.*}_cropped_k2opt.pdf"
+pdf-crop-margins -ap4 20 20 20 20 $fullfile
+k2pdfopt "$cropped" -mode fitwidth -ppgs -dev k2
+#email=atilasaraiva_qXa0WJ@kindle.com
+#email=atilasaraiva@gmail.com
+#echo "" | mailx -s "" -a "$k2pdfopt" $email
+zathura "$k2pdfopt"
+rm "$cropped"

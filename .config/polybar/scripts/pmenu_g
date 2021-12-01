@@ -1,0 +1,18 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 5 -yoffset -75 -xoffset -69 -width 20 -hide-scrollbar -line-padding 4 -padding 20 -lines 8 -font "Fantasque Sans Mono 20" <<< "⏽ Lock|⏼ Reboot|⏻ Shutdown|Hibernate|HiberWindows|Suspend|Hybrid|RebootWindows")"
+            case "$MENU" in
+                *Lock) i3lock-fancy ;;
+                *Reboot) systemctl reboot ;;
+                *Shutdown) systemctl -i poweroff ;;
+                *Hibernate) systemctl hibernate ;;
+                *HiberWindows) sudo /home/atila/.bin/hibereboot ;;
+                *RebootWindows) sudo /home/atila/.bin/ruwindows ;;
+                *Suspend) systemctl suspend ;;
+                *Hybrid) systemctl hybrid-sleep
+            esac
+
+
+

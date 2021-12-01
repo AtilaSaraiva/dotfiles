@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+telegram-desktop &
+qutebrowser &
+qbittorrent &
+safeeyes &
+ulauncher &
+dropbox &
+sudo energyPlan ondemand

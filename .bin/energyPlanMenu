@@ -1,0 +1,20 @@
+#!/usr/bin/zsh
+#
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 5 -yoffset -75 -xoffset -69 -width 20 -hide-scrollbar -line-padding 4 -padding 20 -lines 8 -font "Fantasque Sans Mono 20" <<< "Powersave|Ondemand|Gaming|Performance")"
+	    case "$MENU" in
+                *Powersave)
+                    sudo energyPlan powersave
+                    sudo gpuEnergyPlan low;;
+                *Ondemand)
+                    sudo energyPlan ondemand
+                    sudo gpuEnergyPlan low;;
+                *Gaming)
+                    sudo energyPlan ondemand
+                    sudo gpuEnergyPlan auto ;;
+                *Performance)
+                    sudo energyPlan performance
+                    sudo gpuEnergyPlan auto ;;
+                #*Powersave) notify-send "ok";;
+		#*Ondemand) notify-send "ok" ;;
+                #*Performance) notify-send "ok"
+	    esac

@@ -1,0 +1,3 @@
+#!/bin/bash
+gfortran "$(pwd)/$1" "$(pwd)/$2" -o exe
+./exe

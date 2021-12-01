@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -a --delete --progress -e 'ssh -oHostKeyAlgorithms=+ssh-dss' asqs@marreca.cpgg.intranet.ufba.br:~/"'$1'" "$2"

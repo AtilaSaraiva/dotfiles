@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+activesink=$(pactl list sinks short | grep analog-stereo | cut -d"	" -f2)
+activeport=$(pactl list sinks | grep Active)
+
+if [[ $activeport == *"lineout"* ]];then
+    pactl set-sink-port $activesink analog-output-headphones
+elif [[ $activeport == *"headphones"* ]];then
+    pactl set-sink-port $activesink analog-output-lineout
+fi
+
+echo $activesink

@@ -1,0 +1,3 @@
+#!/usr/bin/zsh
+
+echo scp asqs@marreca.cpgg.intranet.ufba.br:$2 $3

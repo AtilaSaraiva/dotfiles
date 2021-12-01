@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+
+pullmarreca LSRTM_GPU_proj/$1 /home/atila/tmp/aux.bin
+ximage n1=$2 <~/tmp/aux.bin
+rm ~/tmp/aux.bin

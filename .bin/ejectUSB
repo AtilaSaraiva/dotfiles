@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'EjectUSB' -location 5 -yoffset -75 -xoffset -69 -width 20 -hide-scrollbar -line-padding 4 -padding 20 -lines 8 -font "Fantasque Sans Mono 20" <<< "WD My Passport")"
+
+case "$MENU" in
+    *"WD My Passport") id="/run/media/atila/WD My Passport"
+esac
+
+udiskie-umount $id --force --detach

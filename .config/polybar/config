@@ -1,0 +1,172 @@
+; polybar config file
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+;; =================================
+
+
+;; File Inclusion
+
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+include-file = ~/.config/polybar/user_modules.ini
+
+;; =================================
+
+
+;; Bar Settings
+
+[bar/top]
+monitor=${env:MONITOR:}
+
+;; Positioning
+width = 100%
+height = 40
+fixed-center = true
+
+;; Colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;; Line
+line-size = 3
+line-color = ${colors.foreground-alt}
+
+;; Padding & Margins
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+;; Border
+;border-top-size = 2
+;border-top-color = ${colors.foreground-alt}
+
+;; Fonts
+font-0 = "Fantasque Sans Mono:pixelsize=12;2"
+font-1 = symbola:pixelsize=12;4
+font-2 = unifont:fontformat=truetype:size=11:antialias=false;4
+font-3 = Siji:pixelsize=10:size=10;3
+font-4 = WunconSiji:pixelsize=10:size=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10:size=10;3
+font-6 = "Material Icons:size=13;4"
+
+;; Modules
+modules-left = arch bspwm i3 term files browser ytmusic
+modules-center = date
+modules-right = ds4bat weather pulseaudio network memory cpu powermenu
+
+;; Tray
+tray-position = right
+tray-padding = 2
+
+wm-restack = i3
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/base]
+monitor=${env:MONITOR:}
+
+;; Positioning
+width = 100%
+height = 40
+fixed-center = true
+
+;; Colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;; Line
+line-size = 3
+line-color = ${colors.foreground-alt}
+
+;; Padding & Margins
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+;; Border
+;border-top-size = 2
+;border-top-color = ${colors.foreground-alt}
+
+;; Fonts
+font-0 = "Fantasque Sans Mono:pixelsize=12;2"
+font-1 = symbola:pixelsize=12;4
+font-2 = unifont:fontformat=truetype:size=11:antialias=false;4
+font-3 = Siji:pixelsize=10:size=10;3
+font-4 = WunconSiji:pixelsize=10:size=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10:size=10;3
+font-6 = "Material Icons:size=13;4"
+
+wm-restack = i3
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+; two moonitors
+[bar/21]
+inherit = bar/base
+;; Modules
+modules-left = arch bspwm i3 term files browser ytmusic
+modules-center = date
+modules-right = ds4bat weather pulseaudio network memory cpu
+
+;; Tray
+tray-position = right
+tray-padding = 2
+
+[bar/22]
+inherit = bar/base
+;; Modules
+modules-left = arch bspwm i3 term files browser ytmusic
+modules-center = date
+modules-right = ds4bat weather pulseaudio network memory cpu powermenu
+
+
+; three moonitors
+[bar/31]
+inherit = bar/base
+; modules position
+modules-left   = bspwm
+modules-center =
+modules-right  =
+; tray position
+tray-position   = left
+tray-padding    = 2
+tray-background = ${colors.background}
+
+[bar/32]
+inherit = bar/base
+; modules position
+modules-left   = bspwm xkeyboard
+modules-center = mpd
+modules-right  =
+
+
+[bar/33]
+inherit = bar/base
+; modules position
+modules-left   = bspwm
+modules-center =
+modules-right  = remainder recording wlan eth pulseaudio brightness battery pomodoro date time
+
+
+;; =================================
+
+
+;; Settings
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false

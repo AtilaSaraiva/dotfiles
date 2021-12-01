@@ -1,0 +1,2 @@
+#!/bin/zsh
+nvim ~/.config/i3/config

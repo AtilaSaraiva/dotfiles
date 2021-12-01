@@ -1,0 +1,76 @@
+configuration {
+  modi: "drun,run";
+  font: "CaskaydiaCove NF 10";
+  terminal: "alacritty";
+  sidebar-mode: true;
+  display-drun: "Apps";
+  display-run: "Run";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: rgba(149,112,186,0.95);
+  fg: rgb(255,242,179);
+  accent: #a3add1;
+  button: #dcdcd4;
+
+  background-color: @bg;
+  text-color: rgb(255,255,0);
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+  padding: 30px;
+  border-radius: 6px;
+}
+
+prompt, entry {
+  text-color: @fg;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+listview {
+    columns: 2;
+    lines: 10;
+}
+
+entry {
+    margin: 0 0 10px 10px;
+    background-color: @button;
+}
+
+prompt {
+    background-color: @bg;
+    text-color: @fg;
+    margin: 0 0 10px 0;
+    padding: -50px -36px 0 0px;
+}
+
+element {
+  border-radius: 6px;
+  padding: 10px 30px;
+}
+
+element.selected {
+  background-color: @fg;
+  text-color: @bg;
+}
+
+button {
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 50px 0 50px;
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @button;
+  text-color: @fg;
+  padding: 10px;
+}

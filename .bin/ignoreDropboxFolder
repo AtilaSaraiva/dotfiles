@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+attr -s com.dropbox.ignored -V 1 $1

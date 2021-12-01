@@ -1,0 +1,10 @@
+#!/usr/bin/zsh
+
+file="/run/media/atila/WD My Passport"
+if test -d "$file"
+then
+    sleep 1
+    notify-send 'Starting backup'
+    backup
+    notify-send 'Finished backup'
+fi

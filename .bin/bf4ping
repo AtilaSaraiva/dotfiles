@@ -1,0 +1,3 @@
+setcap cap_net_raw+epi $(which wineserver) &
+setcap cap_net_raw+epi $(which wine64-preloader) &
+setcap cap_net_raw+epi $(which wine-preloader) &

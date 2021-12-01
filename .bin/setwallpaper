@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+
+dirname="$HOME/Imagens/Favoritos"
+picturenames=$(find dirname -type f | shuf -n 2)
+pic1=$(echo $picturenames | sed -n 1p)
+pic2=$(echo $picturenames | sed -n 2p)
+
+bgs 

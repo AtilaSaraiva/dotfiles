@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+
+nvidia-settings --load-config-only &
+ulimit -n 2048
+sh /home/atila/.local/apps/magic/mtga-appimage.sh --run

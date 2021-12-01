@@ -1,0 +1,3 @@
+#!/usr/bin/zsh
+
+suswapbytes ns=725 <$1 | suximage

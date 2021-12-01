@@ -1,0 +1,2 @@
+#!/usr/bin/zsh
+sudo sh -c 'echo "abi.vsyscall32 = 0" >> /etc/sysctl.conf && sysctl -p'

@@ -1,0 +1,4 @@
+#!/usr/bin/zsh
+
+ytID=$(xdotool search --class youtube | head -n 1)
+echo $(xdotool getwindowname $ytID | cut -b -60)

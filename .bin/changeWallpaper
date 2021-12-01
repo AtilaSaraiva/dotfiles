@@ -1,0 +1,16 @@
+#!/usr/bin/zsh
+
+mon0="HDMI-A-1"
+mon1="HDMI-A-2"
+
+wallpapers_path=$HOME/Imagens/Favoritos
+
+session=$(echo $XDG_SESSION_TYPE)
+if [[ $session == "x11" ]];then
+    /usr/bin/feh --randomize --bg-fill -g 1920x1080 $HOME/Imagens/Favoritos/* >/dev/null 2>&1
+else
+    fig0=$(find $wallpapers_path -type f | shuf -n 1)
+    fig1=$(find $wallpapers_path -type f | shuf -n 1)
+    /usr/bin/swaybg -i $fig0 -o $mon0 -m fill
+    /usr/bin/swaybg -i $fig1 -o $mon1 -m fill
+fi

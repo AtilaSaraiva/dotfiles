@@ -1,0 +1,120 @@
+* {
+  border: none;
+  font-family: Cantarell Semibold;
+  }
+
+
+#mode {
+    background: rgba(51,0,77, 0.7);
+    border-bottom: 3px solid #ffffff;
+}
+
+window#waybar {
+    background: transparent;
+}
+window > box {
+    margin: 15px 0px 15px 10px;
+    padding: 6px;
+    /*background: rgba(163, 173, 209, 0.9);*/
+    /*background: rgba(153, 77, 0, 0.9);*/
+    background: rgba(51,0,77, 0.7);
+    border-radius: 7px;
+    }
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+#custom-music,
+#custom-geany,
+#custom-files,
+#custom-browser,
+#custom-term,
+#custom-menu,
+#workspaces,
+#pulseaudio,
+#network{
+  background: linear-gradient(137.29deg, rgba(220, 220, 220, 0.8) -8.67%, rgba(220, 220, 220, 0) 119.82%);
+  border: 1.00493px solid rgba(220, 220, 220, 0.49);
+  margin: 0px 0px 0px 0px;
+  border-radius: 7px;
+  }
+#custom-term,
+#custom-geany,
+#custom-files,
+#custom-music,
+#custom-browser{
+  color: #F6F5FF;
+  padding: 2px 0px;
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+
+#custom-power{
+  min-height: 28px;
+  min-width: 25px;
+  color: #F6F5FF;
+  padding: 2px 4px;
+  margin: 0px;
+  font-size: 28px;
+  background: transparent;
+
+}
+
+#custom-separator{
+  background: transparent;
+  color: rgba(220, 220, 220, 0.3);
+}
+#custom-menu{
+  min-height: 28px;
+  min-width: 28px;
+  color: #F6F5FF;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  font-size: 28px;
+  background: linear-gradient(137.29deg, rgba(220, 220, 220, 0.8) -8.67%, rgba(220, 220, 220, 0) 119.82%);
+  border: 1.00493px solid rgba(202, 157, 254, 0.3);
+}
+
+#workspaces{
+  padding: 0px;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: #dcdcdc;
+  background: transparent;
+  margin: 0px;
+  box-shadow: none;
+  font-size: 18px;
+  border: 1.00493px solid rgba(202, 157, 254, 0.3);
+}
+
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#pulseaudio,
+#pulseaudio.muted,
+#network,
+#network.disconnected
+{
+  color: #F6F5FF;
+  padding: 0px;
+  background: transparent;
+  font-size: 19px;
+  border: none;
+}
