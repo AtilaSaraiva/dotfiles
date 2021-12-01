@@ -1,0 +1,38 @@
+#*/30 * * * * DISPLAY=":0.0" $HOME/.bin/changeWallpaper
+#*/30 * * * * rsync /mnt/WinDisk/matrix.kdbx ~/Dropbox/matrix.kdbx
+*/30 * * * * fcrontab -l > ~/.dotfiles/fcrontab.save.dinh
+*/30 * * * * rsync $HOME/.local/share/buku/bookmarks.db ~/.dotfiles/
+*/30 * * * * $HOME/.bin/wanip
+
+@daily pacman -Qqent > $HOME/Dropbox/pkglist.txt
+@daily pacman -Qqemt > $HOME/Dropbox/foreignpkglist.txt
+@daily exa $HOME/Anime > $HOME/Dropbox/listofanime.txt
+@daily exa -R $HOME/Anime > $HOME/Dropbox/listofanimeRecursive.txt
+@daily $HOME/.bin/wanip
+#@daily $HOME/.bin/kpsnap
+#@daily kopia maintenance run
+#@weekly kopia maintenance run --full
+
+!bootrun(true)
+
+5 12 * * 2 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Tensei Shitara Slime"
+30 13 * * 6 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Edens Zero"
+30 13 * * 3 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Kobayashi"
+
+#   45 15 * * 5 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Jujutsu Kaisen"
+#   32 12 * * 3 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Re:Zero"
+#   32 13 * * 4 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Higurashi"
+#   04 18 * * 4 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Go-Toubun no Hanayome 2"
+#   15 15 * * 4 export DISPLAY=:0 && $HOME/.bin/animedown "tosho 2.43: Seiin"
+#   35 9 * * 5 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Jaku-Chara"
+#   30 14 * * 5 export DISPLAY=:0 && $HOME/.bin/animedown "tosho King's Raid"
+#   15 14 * * 6 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Horimiya"
+#   45 15 * * 6 export DISPLAY=:0 && $HOME/.bin/animedown "tosho SK8"
+#   45 10 * * 0 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Kemono Jihen"
+#   5 13 * * 0 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Mushoku Tensei"
+#   50 17 * * 0 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Shingeki no Kyojin: The Final Season"
+#   5 9 * * 3 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Log horizon"
+#   35 12 * * 4 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Dr. Stone"
+#   35 16 * * 1 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Wave!!"
+#   35 8 * * 2 export DISPLAY=:0 && $HOME/.bin/animedown "tosho Black Clover"
+#<++> * * <++> export DISPLAY=:0 && $HOME/.bin/animedown "tosho <++>"
