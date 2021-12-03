@@ -522,7 +522,7 @@ mode "apps" {
 
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
-        bindsym s exec steam-native;mode "default"
+        bindsym s exec steam;mode "default"
 
         # lutris
         bindsym d exec lutris;mode "default"
