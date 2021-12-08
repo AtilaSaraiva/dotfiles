@@ -360,7 +360,7 @@ bindsym $mod+Shift+t exec nmcli connection up vpnufba
 
 
 # Disable titlebar
-default_border pixel 1px
+default_border pixel 3px
 
 set $innerGap 20
 set $outerGap 6

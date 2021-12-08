@@ -10,7 +10,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "custom/music":{
-        "format": "",
+        "format": "",
         "on-click": "brave --app=https://youtube.com/",
         "tooltip": false,
       },
