@@ -2,8 +2,8 @@
 "set clipboard+=unnamedplus    " Permite copiar texto para programas externos
 set timeoutlen=1000 ttimeoutlen=0
 
-let g:python3_host_prog = '/usr/bin/python'
-let g:python_host_prog = '/usr/bin/python2'
+"let g:python3_host_prog = '/usr/bin/python'
+"let g:python_host_prog = '/usr/bin/python2'
 
 "setlocal spell spelllang=pt_br
 " Type :so % to refresh .vimrc after making changes
