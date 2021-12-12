@@ -59,7 +59,7 @@ font pango:RobotoMono 8
 bindsym $mod+o exec buku_run
 
 # add url on the clipboard to buku db
-bindsym $mod+Shift+o exec bookmarkadd
+bindsym $mod+Shift+o exec ~/.bin/bookmarkadd
 
 # Kill all process that might use cpu clocks in order to play games
 bindsym $mod+Delete exec ~/.bin/kill4game
@@ -280,7 +280,7 @@ output $mon1 pos 1920 0 res 1920x1080
 focus output $mon1
 
 # Swap workspaces between displays
-bindsym $mod+c exec ~/.bin/i3-display-swap.sh
+bindsym $mod+c exec ~/.bin/sway-display-swap.sh
 
 # Assing certain workspaces to certain outputs
 #workspace 10 output HDMI-0
@@ -412,12 +412,13 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 #exec  betterlockscreen -w dim
 
 # change wallpaper
-bindsym --release $mod+i  exec oguriWallpaper animated
-bindsym $mod+dead_acute+i exec oguriWallpaper static
-set $wallpapers_path $HOME/Imagens/Favoritos
+set $oguriWallpaper $HOME/.bin/oguriWallpaper
+bindsym --release $mod+i  exec $oguriWallpaper animated
+bindsym $mod+dead_acute+i exec $oguriWallpaper static
+set $wallpapers_path $HOME/Files/Imagens/Favoritos
 #output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill
 #output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
-exec oguriWallpaper static
+exec $oguriWallpaper static
 #exec ~/.bin/changeWallpaper
 
 #bindsym $mod+i exec output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill; exec output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill

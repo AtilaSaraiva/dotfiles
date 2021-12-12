@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 kill $(pgrep telegram) &
 kill $(pgrep qutebrowser) &
 kill $(pgrep firefox) &

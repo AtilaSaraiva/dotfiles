@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 output=$(upower -i /org/freedesktop/UPower/devices/gaming_input_sony_controller_battery_28oc1o3co9co62o91 | grep percentage | cut -d':' -f2)
 echo "🎮 "${output##*( )}

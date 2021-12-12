@@ -1,5 +1,3 @@
-#!/bin/bash
-
 wan=$(curl -sKL ifconfig.me | xargs echo)
 
 curl "https://api.telegram.org/bot1731738551:AAHQgoGNob0ABxsapfbdySzaqEAy2owb4hY/sendMessage?chat_id=171176503&text=$wan"

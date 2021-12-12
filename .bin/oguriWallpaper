@@ -1,23 +1,25 @@
 killall oguri
-if [ $1 == "animated" ];
+mkdir -p $HOME/.config/oguri
+touch $HOME/.config/oguri/config
+if [[ $1 == "animated" ]];
 then
     rm ~/.config/oguri/config
     for output in HDMI-A-1 HDMI-A-2
     do
         echo [output $output] >> ~/.config/oguri/config
-        echo image=$(find ~/Imagens/AnimatedWallpapers/ -type f | shuf -n 1) >> ~/.config/oguri/config
+        echo image=$(find ~/Files/Imagens/AnimatedWallpapers/ -type f | shuf -n 1) >> ~/.config/oguri/config
         echo filter=good >> ~/.config/oguri/config
         echo scaling-mode=fill >> ~/.config/oguri/config
         echo anchor=center >> ~/.config/oguri/config
         echo >> ~/.config/oguri/config
     done
-elif [ $1 == "static" ];
+elif [[ $1 == "static" ]];
 then
     rm ~/.config/oguri/config
     for output in HDMI-A-1 HDMI-A-2
     do
         echo [output $output] >> ~/.config/oguri/config
-        echo image=$(find ~/Imagens/Favoritos/ -type f | shuf -n 1) >> ~/.config/oguri/config
+        echo image=$(find ~/Files/Imagens/Favoritos/ -type f | shuf -n 1) >> ~/.config/oguri/config
         echo filter=good >> ~/.config/oguri/config
         echo scaling-mode=fill >> ~/.config/oguri/config
         echo anchor=center >> ~/.config/oguri/config

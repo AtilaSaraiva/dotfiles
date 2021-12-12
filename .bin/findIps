@@ -1,1 +1,1 @@
-doas nmap -sP 192.168.0.0/24
+sudo nmap -sP 192.168.0.0/24
