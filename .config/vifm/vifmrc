@@ -263,7 +263,7 @@ fileviewer *.[1-8] man ./%c | col -b
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in feh}
-        \ i3-swallow feh %d --start-at %d/%c 2>/dev/null %f,
+        \ feh %d --start-at %d/%c 2>/dev/null %f,
         \ {View in sxiv}
         \ sxiv %f,
         \ {View in gpicview}

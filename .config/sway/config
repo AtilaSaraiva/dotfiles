@@ -465,7 +465,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec mako
 exec --no-startup-id fcitx5 -d
-exec sleep 2 ; exec nice -n 0 qutebrowser
+#exec sleep 2 ; exec nice -n 0 qutebrowser
 #exec nice -n 0 waybar
 #exec_always nice -n 20  steam -silent
 #exec  ulauncher

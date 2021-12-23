@@ -52,20 +52,27 @@ settings:
     - quickmarks
     - bookmarks
     - history
+  content.desktop_capture:
+    https://meet.google.com: true
   content.geolocation:
     https://internetbanking.bancointer.com.br: true
     https://portal.xpi.com.br: true
     https://www.google.com: false
   content.javascript.can_access_clipboard:
     global: true
+  content.media.audio_capture:
+    https://meet.google.com: true
   content.media.audio_video_capture:
+    https://meet.google.com: true
     https://studio.youtube.com: true
   content.media.video_capture:
     https://liveness.mercadolivre.com.br: true
     https://liveness.mercadopago.com.br: true
+    https://meet.google.com: true
     https://www.onlinemictest.com: true
   content.notifications.enabled:
     https://calendar.google.com: true
+    https://meet.google.com: true
     https://pomodoro-tracker.com: true
     https://pt.aliexpress.com: false
     https://www.chess.com: true
@@ -93,9 +100,9 @@ settings:
       arch: https://wiki.archlinux.org/index.php?search={}
       gen: http://gen.lib.rus.ec/search.php?req={}
       myanime: https://myanimelist.net/anime.php?q={}
+      nix: https://search.nixos.org/packages?channel=21.11&from=0&size=50&sort=relevance&type=packages&query={}
       olx: https://ba.olx.com.br/?q={}
       tosho: https://animetosho.org/search?q={}
       yt: https://www.youtube.com/results?search_q:uery={}
-      nix: https://search.nixos.org/packages?channel=21.11&from=0&size=50&sort=relevance&type=packages&query={}
   zoom.default:
     global: '120'

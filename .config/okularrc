@@ -40,28 +40,14 @@ HDMI-A-2 Height 1920x1080=1080
 HDMI-A-2 Width 1920x1080=1920
 HDMI-A-2 Window-Maximized 1920x1080=true
 Height 1080=1014
-State=AAAA/wAAAAD9AAAAAAAAAa0AAAG4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+State=AAAA/wAAAAD9AAAAAAAAAkoAAAG5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
 Width 1920=943
 
 [Recent Files]
-File1[$e]=$HOME/Documentos/tccmarcosCorrection.pdf
-File10[$e]=$HOME/Dropbox/Documentos Pessoais/Certificados/Simp2018-ApresKozeny.pdf
-File2[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese-correçãoPrópria.pdf
-File3[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese-correçãoPrópria2.pdf
-File4[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/tese.pdf
-File5[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/Atila-27-tese.pdf
-File6[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/1-paperCorrigido.pdf
-File7[$e]=$HOME/Dropbox/Projetos/mestrado/Dissertações/Atila-paper.pdf
-File8[$e]=$HOME/Documentos/1997-19.pdf
-File9[$e]=$HOME/Dropbox/Documentos Pessoais/Certificados/Congresso2017-Apres.pdf
-Name1[$e]=tccmarcosCorrection.pdf
-Name10[$e]=Simp2018-ApresKozeny.pdf
-Name2[$e]=tese-correçãoPrópria.pdf
-Name3[$e]=tese-correçãoPrópria2.pdf
-Name4[$e]=tese.pdf
-Name5[$e]=Atila-27-tese.pdf
-Name6[$e]=1-paperCorrigido.pdf
-Name7[$e]=Atila-paper.pdf
-Name8[$e]=1997-19.pdf
-Name9[$e]=Congresso2017-Apres.pdf
+File1[$e]=$HOME/Files/Documentos/Trackfy/sprints/2021_12_17/bancodedados.pdf
+File2[$e]=$HOME/Files/Documentos/Trackfy/sprints/2021_12_17/kalman.pdf
+File3[$e]=$HOME/Files/Documentos/Trackfy/Papers/Blockchain for Dummies 3rd Edition 2019.pdf
+Name1[$e]=bancodedados.pdf
+Name2[$e]=kalman.pdf
+Name3[$e]=Blockchain for Dummies 3rd Edition 2019.pdf
