@@ -456,6 +456,7 @@ for_window [class="Cheese"] floating enable, resize set 1920 1080, move position
 
 for_window [app_id="org.qbittorrent.qBittorrent"] move scratchpad
 for_window [class="Element"] move scratchpad
+for_window [class="steam"] floating enable
 for_window [title="Firefox — Sharing Indicator"] move scratchpad
 for_window [class="Slack"] move scratchpad
 for_window [instance="origin.exe"] floating enable
@@ -535,7 +536,8 @@ mode "apps" {
 
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
-        bindsym s exec steam;mode "default"
+        #bindsym s exec steam;mode "default"
+        bindsym s exec flatpak run com.valvesoftware.Steam;mode "default"
 
         # lutris
         bindsym d exec lutris;mode "default"
