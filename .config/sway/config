@@ -484,6 +484,7 @@ exec --no-startup-id fcitx5 -d
 #exec  ulauncher
 exec qbittorrent
 exec udiskie
+exec flatpak run com.valvesoftware.Steam -silent
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
