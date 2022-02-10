@@ -118,7 +118,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Show the sup-mail scratchpad window, if any.
-bindsym $mod+Ctrl+t [app_id="telegramdesktop"] scratchpad show
+bindsym $mod+Ctrl+t [app_id="kotatogramdesktop"] scratchpad show
 bindsym $mod+Ctrl+b [app_id="com.rafaelmardojai.Blanket"] scratchpad show
 #bindsym $mod+Ctrl+d [class="Transmission-gtk"] scratchpad show
 bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
@@ -237,8 +237,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 #bindsym $mod+Ctrl+Shift+4 move container to workspace 14
 
 # Move to a new empty workspace
-bindsym $mod+Ctrl+h exec --no-startup-id i3empty.py prev
-bindsym $mod+Ctrl+l exec --no-startup-id i3empty.py next
+bindsym $mod+Ctrl+h exec --no-startup-id ~/.bin/i3empty.py prev
+bindsym $mod+Ctrl+l exec --no-startup-id ~/.bin/i3empty.py next
 
 # Move a window to a new empty workspace
 bindsym $mod+Shift+Ctrl+h exec --no-startup-id i3empty.py --move prev
@@ -461,7 +461,7 @@ for_window [title="Firefox — Sharing Indicator"] move scratchpad
 for_window [class="Slack"] move scratchpad
 for_window [instance="origin.exe"] floating enable
 for_window [class="origin.exe"] floating enable
-for_window [app_id="telegramdesktop"] move scratchpad, resize set 1600 900, move position 160px 100px
+for_window [app_id="kotatogramdesktop"] move scratchpad, resize set 1600 900, move position 160px 100px
 for_window [app_id="com.rafaelmardojai.Blanket"] move scratchpad
 #for_window [class="Transmission-gtk"] move scratchpad
 for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
@@ -482,14 +482,15 @@ exec --no-startup-id fcitx5 -d
 #exec nice -n 0 waybar
 #exec_always nice -n 20  steam -silent
 #exec  ulauncher
-exec qbittorrent
+exec sleep 10 && qbittorrent
+exec kotatogram-desktop
 exec udiskie
 exec flatpak run com.valvesoftware.Steam -silent
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
 exec ~/.bin/remote
-exec  telegram-desktop
+#exec  telegram-desktop
 exec  blueman-tray
 exec  wlsunset -l -12.97111 -L -38.51083
 exec  sleep 20; exec  dropbox

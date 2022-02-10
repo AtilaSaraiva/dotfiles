@@ -3,6 +3,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" vim-nix
+Plug 'LnL7/vim-nix'
+
 " Nerd tree
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
