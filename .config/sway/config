@@ -490,6 +490,7 @@ exec flatpak run com.valvesoftware.Steam -silent
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
 exec ~/.bin/remote
+exec easyeffects
 #exec  telegram-desktop
 exec  blueman-tray
 exec  wlsunset -l -12.97111 -L -38.51083
