@@ -40,7 +40,7 @@ HDMI-A-2 Height 1920x1080=1080
 HDMI-A-2 Width 1920x1080=1920
 HDMI-A-2 Window-Maximized 1920x1080=true
 Height 1080=1014
-State=AAAA/wAAAAD9AAAAAAAABvQAAAPFAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+State=AAAA/wAAAAD9AAAAAAAABs4AAAOzAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
 Width 1920=943
 
@@ -49,7 +49,13 @@ File1[$e]=$HOME/Files/Documentos/Trackfy/sprints/2021_12_17/bancodedados.pdf
 File2[$e]=$HOME/Files/Documentos/Trackfy/sprints/2021_12_17/kalman.pdf
 File3[$e]=$HOME/Files/Documentos/Trackfy/Papers/Blockchain for Dummies 3rd Edition 2019.pdf
 File4[$e]=$HOME/Files/Downloads/ED_1_PETROBRAS_PSP1_2021_ABERTURA(2).PDF
+File5[$e]=$HOME/Files/Documentos/Livros/Física/Herch Moyses Nussenzveig - Curso de Física Básica_ Eletromagnetismo - Vol. 3-Edgard Blücher.pdf
+File6[$e]=$HOME/Files/Dropbox/Projetos/mestrado/geoftese/tese.pdf
+File7[$e]=$HOME/Files/Dropbox/Projetos/mestrado/correção/Dissertação_Atila Soares_dfbp.pdf
 Name1[$e]=bancodedados.pdf
 Name2[$e]=kalman.pdf
 Name3[$e]=Blockchain for Dummies 3rd Edition 2019.pdf
 Name4[$e]=ED_1_PETROBRAS_PSP1_2021_ABERTURA(2).PDF
+Name5[$e]=Herch Moyses Nussenzveig - Curso de Física Básica_ Eletromagnetismo - Vol. 3-Edgard Blücher.pdf
+Name6[$e]=tese.pdf
+Name7[$e]=Dissertação_Atila Soares_dfbp.pdf
