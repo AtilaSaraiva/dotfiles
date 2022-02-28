@@ -16,6 +16,7 @@
 set $mod Mod1
 set $term alacritty
 set $browser QT_QPA_PLATFORM=wayland qutebrowser
+set $teams google-chrome-stable --app="https://teams.microsoft.com/"
 
 set $firefox "MOZ_ENABLE_WAYLAND=1 firefox"
 
@@ -126,6 +127,7 @@ bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
 bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
 #bindsym $mod+Ctrl+q [class="ICE-SSB-youtubemusic"] scratchpad show
 bindsym $mod+Ctrl+d [app_id="org.qbittorrent.qBittorrent"] scratchpad show
+bindsym $mod+Ctrl+s [instance="teams.microsoft.com"] scratchpad show
 bindsym $mod+Ctrl+r [class="Slack"] scratchpad show
 bindsym $mod+Ctrl+e [class="Element"] scratchpad show
 
@@ -456,6 +458,7 @@ assign [class="Cheese"] 2
 for_window [class="Cheese"] floating enable, resize set 1920 1080, move position center
 
 for_window [app_id="org.qbittorrent.qBittorrent"] move scratchpad
+for_window [instance="teams.microsoft.com"] move scratchpad
 for_window [app_id="com.github.wwmm.easyeffects"] move scratchpad
 for_window [class="Element"] move scratchpad
 for_window [class="steam"] floating enable
@@ -557,7 +560,10 @@ mode "apps" {
         bindsym b exec blanket;mode "default"
 
         # $firefox
-        bindsym f exec $firefox ;mode "default"
+        bindsym f exec $firefox;mode "default"
+
+        # teams
+        bindsym t exec $teams;mode "default"
 
         # $firefox private
         bindsym g exec $firefox -private-window;mode "default"
