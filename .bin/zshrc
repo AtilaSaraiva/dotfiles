@@ -1,2 +1,2 @@
-#!/bin/zsh
-nvim ~/.zshrc
+#!/usr/bin/env zsh
+nvim ~/.config/shell/.zshrc
