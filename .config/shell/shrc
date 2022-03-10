@@ -9,7 +9,7 @@
 alias githome="git config user.name $GITHUB_PRIVATE_NAME && git config user.email $GITHUB_PRIVATE_EMAIL"
 alias gitwork="git config user.name $GITHUB_WORK_NAME && git config user.email $GITHUB_WORK_EMAIL"
 
-alias airis='ssh -CXY -o ServerAliveInterval=40 murilo@airis-login04.fieb.org.br -L 8443:airis:8443'
+alias airis='ssh -CXY -o ServerAliveInterval=40 murilo@airis-login04.fieb.org.br -L 8443:airis:8443 -i ~/.ssh/id_murilo'
 
 
 # Completion for existing commands

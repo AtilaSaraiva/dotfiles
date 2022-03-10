@@ -17,6 +17,7 @@ set $mod Mod1
 set $term alacritty
 set $browser QT_QPA_PLATFORM=wayland qutebrowser
 set $teams google-chrome-stable --app="https://teams.microsoft.com/"
+set $music google-chrome-stable --app="https://music.youtube.com/"
 
 set $firefox "MOZ_ENABLE_WAYLAND=1 firefox"
 
@@ -124,10 +125,10 @@ bindsym $mod+Ctrl+t [app_id="kotatogramdesktop"] scratchpad show
 bindsym $mod+Ctrl+b [app_id="com.rafaelmardojai.Blanket"] scratchpad show
 #bindsym $mod+Ctrl+d [class="Transmission-gtk"] scratchpad show
 bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
-bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
-#bindsym $mod+Ctrl+q [class="ICE-SSB-youtubemusic"] scratchpad show
+#bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
 bindsym $mod+Ctrl+d [app_id="org.qbittorrent.qBittorrent"] scratchpad show
 bindsym $mod+Ctrl+s [instance="teams.microsoft.com"] scratchpad show
+bindsym $mod+Ctrl+q [instance="music.youtube.com"] scratchpad show
 bindsym $mod+Ctrl+r [class="Slack"] scratchpad show
 bindsym $mod+Ctrl+e [class="Element"] scratchpad show
 
@@ -210,7 +211,7 @@ bindsym $mod+6 workspace 6, focus tiling; exec $map-to-active
 bindsym $mod+7 workspace 7, focus tiling; exec $map-to-active
 bindsym $mod+8 workspace 8, focus tiling; exec $map-to-active
 bindsym $mod+9 workspace 9, focus tiling; exec $map-to-active
-bindsym $mod+v workspace 9, focus tiling; exec $map-to-active
+bindsym $mod+v workspace 8, workspace 9, focus tiling; exec $map-to-active
 bindsym $mod+0 workspace 10, focus tiling; exec $map-to-active
 #bindsym Shift+Ctrl+1 workspace 11, focus tiling
 #bindsym Shift+Ctrl+2 workspace 12, focus tiling
@@ -458,7 +459,8 @@ assign [class="Cheese"] 2
 for_window [class="Cheese"] floating enable, resize set 1920 1080, move position center
 
 for_window [app_id="org.qbittorrent.qBittorrent"] move scratchpad
-for_window [instance="teams.microsoft.com"] move scratchpad
+for_window [instance="teams.microsoft.com"] move scratchpad, resize set 1600 900, move position 160px 100px"
+for_window [instance="music.youtube.com"] move scratchpad, resize set 1600 900, move position 160px 100px"
 for_window [app_id="com.github.wwmm.easyeffects"] move scratchpad
 for_window [class="Element"] move scratchpad
 for_window [class="steam"] floating enable
@@ -521,7 +523,8 @@ bindsym $mod+y mode "work"
 
 mode "apps" {
         # open youtube music
-        bindsym m exec ytmdesktop;mode "default"
+        #bindsym m exec ytmdesktop;mode "default"
+        bindsym m exec $music;mode "default"
         #bindsym m exec firefox --class ICE-SSB-youtubemusic --profile $HOME/.local/share/ice/$firefox/youtubemusic --no-remote https://music.youtube.com;mode "default"
 
         # open netflix

@@ -1,5 +1,5 @@
 #!/bin/sh
 
-sshfs pi@192.168.0.12:/home/pi/Documents/trackfy/ /home/atila/Documentos/Trackfy/myrpi -C
-alacritty -e vifm /home/atila/Documentos/Trackfy/myrpi &
+sshfs pi@192.168.0.12:/home/pi/Documents/trackfy/ /home/atila/Files/Documentos/Trackfy/myrpi -C
+alacritty -e vifm /home/atila/Files/Documentos/Trackfy/myrpi &
 TERM=xterm-256color ssh pi@192.168.0.12 -C -X

@@ -137,4 +137,4 @@ recovery-pacman() {
 
 #pokemon-colorscripts -r
 source ~/.config/shell/shrc
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
