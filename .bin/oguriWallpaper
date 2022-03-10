@@ -4,7 +4,7 @@ touch $HOME/.config/oguri/config
 if [[ $1 == "animated" ]];
 then
     rm ~/.config/oguri/config
-    for output in HDMI-A-1 HDMI-A-2
+    for output in $(swaymsg -t get_outputs | jq -r '.[] | {name} | .name')
     do
         echo [output $output] >> ~/.config/oguri/config
         echo image=$(find ~/Files/Imagens/AnimatedWallpapers/ -type f | shuf -n 1) >> ~/.config/oguri/config
@@ -16,7 +16,7 @@ then
 elif [[ $1 == "static" ]];
 then
     rm ~/.config/oguri/config
-    for output in HDMI-A-1 HDMI-A-2
+    for output in $(swaymsg -t get_outputs | jq -r '.[] | {name} | .name')
     do
         echo [output $output] >> ~/.config/oguri/config
         echo image=$(find ~/Files/Imagens/Favoritos/ -type f | shuf -n 1) >> ~/.config/oguri/config
