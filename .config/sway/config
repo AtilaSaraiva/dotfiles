@@ -16,6 +16,8 @@
 set $mod Mod1
 set $term alacritty
 set $browser QT_QPA_PLATFORM=wayland qutebrowser
+set $teams google-chrome-stable --app="https://teams.microsoft.com/"
+set $music google-chrome-stable --app="https://music.youtube.com/"
 
 set $firefox "MOZ_ENABLE_WAYLAND=1 firefox"
 
@@ -59,7 +61,7 @@ font pango:RobotoMono 8
 bindsym $mod+o exec buku_run
 
 # add url on the clipboard to buku db
-bindsym $mod+Shift+o exec bookmarkadd
+bindsym $mod+Shift+o exec ~/.bin/bookmarkadd
 
 # Kill all process that might use cpu clocks in order to play games
 bindsym $mod+Delete exec ~/.bin/kill4game
@@ -90,7 +92,8 @@ bindsym $mod+b exec $browser
 #start rofi
  #bindsym $mod+d exec rofi -show drun -show-icons -hide-scrollbar -lines 10 -eh 1 -width 40 -location 8 -xoffset 170 -yoffset 70 -padding 30 -disable-history -font "RobotoMono 18"
 #start ulauncher
-set $menu rofi -show drun -show-icons -icon-theme "Papirus-Dark"
+#set $menu rofi -show drun -show-icons -icon-theme "Papirus-Dark"
+set $menu sirula
 #bindsym $mod+d exec ulauncher-toggle
 bindsym $mod+d exec $menu
 
@@ -118,13 +121,14 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Show the sup-mail scratchpad window, if any.
-bindsym $mod+Ctrl+t [app_id="telegramdesktop"] scratchpad show
+bindsym $mod+Ctrl+t [app_id="kotatogramdesktop"] scratchpad show
 bindsym $mod+Ctrl+b [app_id="com.rafaelmardojai.Blanket"] scratchpad show
 #bindsym $mod+Ctrl+d [class="Transmission-gtk"] scratchpad show
 bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
-bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
-#bindsym $mod+Ctrl+q [class="ICE-SSB-youtubemusic"] scratchpad show
+#bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
 bindsym $mod+Ctrl+d [app_id="org.qbittorrent.qBittorrent"] scratchpad show
+bindsym $mod+Ctrl+s [instance="teams.microsoft.com"] scratchpad show
+bindsym $mod+Ctrl+q [instance="music.youtube.com"] scratchpad show
 bindsym $mod+Ctrl+r [class="Slack"] scratchpad show
 bindsym $mod+Ctrl+e [class="Element"] scratchpad show
 
@@ -207,7 +211,7 @@ bindsym $mod+6 workspace 6, focus tiling; exec $map-to-active
 bindsym $mod+7 workspace 7, focus tiling; exec $map-to-active
 bindsym $mod+8 workspace 8, focus tiling; exec $map-to-active
 bindsym $mod+9 workspace 9, focus tiling; exec $map-to-active
-bindsym $mod+v workspace 9, focus tiling; exec $map-to-active
+bindsym $mod+v workspace 8, workspace 9, focus tiling; exec $map-to-active
 bindsym $mod+0 workspace 10, focus tiling; exec $map-to-active
 #bindsym Shift+Ctrl+1 workspace 11, focus tiling
 #bindsym Shift+Ctrl+2 workspace 12, focus tiling
@@ -237,8 +241,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 #bindsym $mod+Ctrl+Shift+4 move container to workspace 14
 
 # Move to a new empty workspace
-bindsym $mod+Ctrl+h exec --no-startup-id i3empty.py prev
-bindsym $mod+Ctrl+l exec --no-startup-id i3empty.py next
+bindsym $mod+Ctrl+h exec --no-startup-id ~/.bin/i3empty.py prev
+bindsym $mod+Ctrl+l exec --no-startup-id ~/.bin/i3empty.py next
 
 # Move a window to a new empty workspace
 bindsym $mod+Shift+Ctrl+h exec --no-startup-id i3empty.py --move prev
@@ -280,7 +284,7 @@ output $mon1 pos 1920 0 res 1920x1080
 focus output $mon1
 
 # Swap workspaces between displays
-bindsym $mod+c exec ~/.bin/i3-display-swap.sh
+bindsym $mod+c exec ~/.bin/sway-display-swap.sh
 
 # Assing certain workspaces to certain outputs
 #workspace 10 output HDMI-0
@@ -320,9 +324,21 @@ bindsym $mod+Ctrl+o exec  "rofi -show run -font \\"DejaVu 9\\" -run-shell-comman
 # keepmenu
 bindsym $mod+a exec kpmenu -m wofi
 
-# Manage audio volume
+# Manage audio
 bindsym $mod+comma exec amixer set Master -q 5%-
 bindsym $mod+period exec amixer set Master -q 5%+
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master -q 5%-
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym $mod+dead_tilde exec playerctl play-pause
+bindsym $mod+Shift+comma exec playerctl previous
+bindsym $mod+Shift+period exec playerctl next
 
 # switch sound in active window between sinks
 #bindsym $mod+p exec ~/.bin/sinkSwitcher
@@ -412,12 +428,13 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 #exec  betterlockscreen -w dim
 
 # change wallpaper
-bindsym --release $mod+i  exec oguriWallpaper animated
-bindsym $mod+dead_acute+i exec oguriWallpaper static
-set $wallpapers_path $HOME/Imagens/Favoritos
+set $oguriWallpaper $HOME/.bin/oguriWallpaper
+bindsym --release $mod+i  exec $oguriWallpaper animated
+bindsym $mod+dead_acute+i exec $oguriWallpaper static
+set $wallpapers_path $HOME/Files/Imagens/Favoritos
 #output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill
 #output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
-exec oguriWallpaper static
+exec $oguriWallpaper static
 #exec ~/.bin/changeWallpaper
 
 #bindsym $mod+i exec output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill; exec output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
@@ -442,12 +459,16 @@ assign [class="Cheese"] 2
 for_window [class="Cheese"] floating enable, resize set 1920 1080, move position center
 
 for_window [app_id="org.qbittorrent.qBittorrent"] move scratchpad
+for_window [instance="teams.microsoft.com"] move scratchpad, resize set 1600 900, move position 160px 100px"
+for_window [instance="music.youtube.com"] move scratchpad, resize set 1600 900, move position 160px 100px"
+for_window [app_id="com.github.wwmm.easyeffects"] move scratchpad
 for_window [class="Element"] move scratchpad
+for_window [class="steam"] floating enable
 for_window [title="Firefox — Sharing Indicator"] move scratchpad
 for_window [class="Slack"] move scratchpad
 for_window [instance="origin.exe"] floating enable
 for_window [class="origin.exe"] floating enable
-for_window [app_id="telegramdesktop"] move scratchpad, resize set 1600 900, move position 160px 100px
+for_window [app_id="kotatogramdesktop"] move scratchpad, resize set 1600 900, move position 160px 100px
 for_window [app_id="com.rafaelmardojai.Blanket"] move scratchpad
 #for_window [class="Transmission-gtk"] move scratchpad
 for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
@@ -464,17 +485,20 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec mako
 exec --no-startup-id fcitx5 -d
-exec sleep 2 ; exec nice -n 0 qutebrowser
+#exec sleep 2 ; exec nice -n 0 qutebrowser
 #exec nice -n 0 waybar
 #exec_always nice -n 20  steam -silent
 #exec  ulauncher
-exec qbittorrent
+exec sleep 10 && qbittorrent
+exec kotatogram-desktop
 exec udiskie
+exec flatpak run com.valvesoftware.Steam -silent
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
 exec ~/.bin/remote
-exec  telegram-desktop
+exec easyeffects
+#exec  telegram-desktop
 exec  blueman-tray
 exec  wlsunset -l -12.97111 -L -38.51083
 exec  sleep 20; exec  dropbox
@@ -499,7 +523,8 @@ bindsym $mod+y mode "work"
 
 mode "apps" {
         # open youtube music
-        bindsym m exec ytmdesktop;mode "default"
+        #bindsym m exec ytmdesktop;mode "default"
+        bindsym m exec $music;mode "default"
         #bindsym m exec firefox --class ICE-SSB-youtubemusic --profile $HOME/.local/share/ice/$firefox/youtubemusic --no-remote https://music.youtube.com;mode "default"
 
         # open netflix
@@ -522,7 +547,8 @@ mode "apps" {
 
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
-        bindsym s exec steam;mode "default"
+        #bindsym s exec steam;mode "default"
+        bindsym s exec flatpak run com.valvesoftware.Steam;mode "default"
 
         # lutris
         bindsym d exec lutris;mode "default"
@@ -537,7 +563,10 @@ mode "apps" {
         bindsym b exec blanket;mode "default"
 
         # $firefox
-        bindsym f exec $firefox ;mode "default"
+        bindsym f exec $firefox;mode "default"
+
+        # teams
+        bindsym t exec $teams;mode "default"
 
         # $firefox private
         bindsym g exec $firefox -private-window;mode "default"

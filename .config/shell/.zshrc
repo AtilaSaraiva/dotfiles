@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source $HOME/.RSFROOT/share/madagascar/etc/env.sh
+#source $HOME/.RSFROOT/share/madagascar/etc/env.sh
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/atila/.oh-my-zsh"
@@ -135,5 +135,7 @@ recovery-pacman() {
     --needed
 }
 
-pokemon-colorscripts -r
-source ~/.config/shell
+#pokemon-colorscripts -r
+source ~/.config/shell/shrc
+source ~/.config/shell/shenv
+#eval "$(starship init zsh)"

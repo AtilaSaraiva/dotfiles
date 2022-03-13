@@ -9,6 +9,7 @@
 alias githome="git config user.name $GITHUB_PRIVATE_NAME && git config user.email $GITHUB_PRIVATE_EMAIL"
 alias gitwork="git config user.name $GITHUB_WORK_NAME && git config user.email $GITHUB_WORK_EMAIL"
 
+alias airis='ssh -CXY -o ServerAliveInterval=40 murilo@airis-login04.fieb.org.br -L 8443:airis:8443 -i ~/.ssh/id_murilo'
 
 
 # Completion for existing commands
@@ -33,11 +34,12 @@ alias hipify='perl /home/atila/gitRepos/HIPIFY/bin/hipify-perl'
 alias cdda='i3-swallow cataclysm-tiles'
 alias is='i3-swallow'
 alias lz="ls --sort size -l --block-size=M"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotf/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.dotf/ --work-tree=$HOME"
 alias savedGames="/usr/bin/git --git-dir=$HOME/.savedGames/ --work-tree=$HOME"
 #alias sudo="doas"
 alias swayconfig="nvim ~/.config/sway/config"
 alias uptdotfiles="dotfiles commit -m 'whatever' && dotfiles push -u origin master"
+alias dedup='rmlint --types="duplicates" --config=sh:handler=clone'
 
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'

@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 alacritty -e watch -n 0.5 cat /sys/class/drm/card0/device/pp_dpm_sclk &
 alacritty -e watch -n 0.5 cat /sys/class/drm/card0/device/pp_dpm_mclk &
 alacritty -e sudo watch -n 0.5 cat /sys/kernel/debug/dri/0/amdgpu_pm_info &

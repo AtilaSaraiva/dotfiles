@@ -24,6 +24,7 @@ window > box {
 window#waybar.hidden {
   opacity: 0.2;
 }
+#config,
 #custom-music,
 #custom-geany,
 #custom-files,
@@ -111,6 +112,15 @@ window#waybar.hidden {
 #pulseaudio.muted,
 #network,
 #network.disconnected
+{
+  color: #F6F5FF;
+  padding: 0px;
+  background: transparent;
+  font-size: 19px;
+  border: none;
+}
+
+#clock
 {
   color: #F6F5FF;
   padding: 0px;

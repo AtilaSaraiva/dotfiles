@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 import argparse
 import json
 import re
@@ -7,7 +7,7 @@ from subprocess import PIPE, run
 
 
 def get_ws():
-    return json.loads(run('i3-msg -t get_workspaces'.split(), stdout=PIPE).stdout)
+    return json.loads(run('swaymsg -t get_workspaces'.split(), stdout=PIPE).stdout)
 
 
 def to_empty(current=None, strict=False, right=True, move=False, wrap=True, min_num=1):
@@ -41,9 +41,9 @@ def to_empty(current=None, strict=False, right=True, move=False, wrap=True, min_
             return
 
     if move:
-        s = 'i3-msg move container to workspace {0}; workspace {0}'.format(new_ix)
+        s = 'swaymsg move container to workspace {0}; workspace {0}'.format(new_ix)
     else:
-        s = 'i3-msg workspace ' + str(new_ix)
+        s = 'swaymsg workspace ' + str(new_ix)
     print(s)
     run(s.split())
 

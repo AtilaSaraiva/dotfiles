@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 session=$(echo $XDG_SESSION_TYPE)
 if [[ $session == "x11" ]];then
