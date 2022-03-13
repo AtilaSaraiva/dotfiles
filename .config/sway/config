@@ -674,3 +674,6 @@ input 1133:49271:Logitech_USB_Optical_Mouse {
 input 1386:890:Wacom_One_by_Wacom_S_Pen {
     left_handed "disabled"
 }
+input type:touchpad {
+    tap "enabled"
+}
