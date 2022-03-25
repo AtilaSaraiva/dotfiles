@@ -1,0 +1,82 @@
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+#set previewer stpv
+#set cleaner stpvimgclr
+#&stpvimg --listen $id
+#cmd on-quit $stpvimg --end $id
+set drawbox
+set shell zsh
+
+cmd dragon &dragon $fx
+map E dragon
+
+cmd trash %trash-put $fx
+cmd undo %trash-restore $(trash-list | tail -n 1 | awk '{print $NF}')
+map D trash
+map U undo
+
+map <space> toggle
+map J :toggle; down
+map K :toggle; up
+
+# fasd
+cmd fasd_dir ${{
+  res="$(fasd -dl | grep -iv cache | fzf 2>/dev/tty | sed 's/\\/\\\\/g;s/"/\\"/g')"
+  if [ -d "$res" ]; then
+     cmd="cd"
+  else
+     cmd="select"
+  fi
+lf -remote "send $id $cmd \"$res\""
+}}
+
+map go :fasd_dir
+
+# Autojump
+cmd aj %lf -remote "send $id cd '$(autojump $1)'"
+map a push :aj<space>
+
+# archivemount
+cmd open ${{
+   case "$f" in
+       *.tar.bz|*.tar.bz2|*.tbz|*.tbz2|*.tar.gz|*.tgz|*.tar.xz|*.txz|*.zip|*.rar|*.iso)
+           mntdir="$f-archivemount"
+           [ ! -d "$mntdir" ] && {
+               mkdir "$mntdir"
+               archivemount "$f" "$mntdir"
+               echo "$mntdir" >> "/tmp/__lf_archivemount_$id"
+           }
+           lf -remote "send $id cd \"$mntdir\""
+           lf -remote "send $id reload"
+           ;;
+       *)
+           for f in $fx; do
+               $OPENER $f > /dev/null 2> /dev/null &
+           done;;
+   esac
+}}
+
+#   lfcd () {
+#       tmp="$(mktemp)"
+#       fid="$(mktemp)"
+#       lf -command '$printf $id > '"$fid"'' -last-dir-path="$tmp" "$@"
+#       id="$(cat "$fid")"
+#       archivemount_dir="/tmp/__lf_archivemount_$id"
+#       if [ -f "$archivemount_dir" ]; then
+#           cat "$archivemount_dir" | \
+#               while read -r line; do
+#                   sudo umount "$line"
+#                   rmdir "$line"
+#               done
+#           rm -f "$archivemount_dir"
+#       fi
+#       if [ -f "$tmp" ]; then
+#           dir="$(cat "$tmp")"
+#           rm -f "$tmp"
+#           if [ -d "$dir" ]; then
+#               if [ "$dir" != "$(pwd)" ]; then
+#                   cd "$dir"
+#               fi
+#           fi
+#       fi
+#   }
