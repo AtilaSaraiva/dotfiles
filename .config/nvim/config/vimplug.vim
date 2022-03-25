@@ -3,6 +3,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'ptzz/lf.vim'
+Plug 'voldikss/vim-floaterm'
+
 " vim-nix
 Plug 'LnL7/vim-nix'
 
