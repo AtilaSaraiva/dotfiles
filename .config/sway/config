@@ -14,7 +14,7 @@
 #================================================
 
 set $mod Mod1
-set $term alacritty
+set $term kitty
 set $browser QT_QPA_PLATFORM=wayland qutebrowser
 set $teams google-chrome-stable --app="https://teams.microsoft.com/"
 set $music google-chrome-stable --app="https://music.youtube.com/"
@@ -77,7 +77,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+t exec $term --class "dropdown_terminal" -e "zsh"
 
 # open vifm
-bindsym $mod+n exec alacritty --class vifm -e ~/.bin/vifm_ueber
+bindsym $mod+n exec kity --class lf -e lf
 bindsym $mod+Shift+n exec kitty --class=anime vifm ~/Anime
 
 # kill focused window
@@ -308,7 +308,7 @@ bindsym $mod+semicolon exec makoctl dismiss --all
 
 seat seat0 hide_cursor 3000
 
-bindsym $mod+Shift+i exec alacritty --class bookmarkViewer -e "oil"
+bindsym $mod+Shift+i exec kitty --class bookmarkViewer -e "oil"
 
 # Eject USB menu
 bindsym $mod+Shift+y exec ejectUSB
@@ -578,10 +578,10 @@ mode "apps" {
         bindsym p exec pavucontrol;mode "default"
 
         # cmus
-        bindsym v exec alacritty -e cmus;mode "default"
+        bindsym v exec kitty -e cmus;mode "default"
 
         # htop
-        bindsym h exec alacritty -e htop;mode "default"
+        bindsym h exec kitty -e htop;mode "default"
 
         # piper
         bindsym l exec piper;mode "default"
@@ -649,8 +649,8 @@ bar {
     font pango:RobotoMono 11, FontAwesome 12
 }
 
-bindsym $mod+Shift+d exec alacritty -t 'launcher' -e /usr/bin/sway-launcher-desktop
-for_window [app_id="Alacritty" title="^launcher$"] floating enable; border pixel 4; sticky enable
+bindsym $mod+Shift+d exec kitty -t 'launcher' -e /usr/bin/sway-launcher-desktop
+for_window [app_id="kitty" title="^launcher$"] floating enable; border pixel 4; sticky enable
 
 
 
