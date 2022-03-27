@@ -340,6 +340,9 @@ bindsym $mod+dead_tilde exec playerctl play-pause
 bindsym $mod+Shift+comma exec playerctl previous
 bindsym $mod+Shift+period exec playerctl next
 
+bindsym --locked XF86MonBrightnessUp exec brightnessctl s +5%
+bindsym --locked XF86MonBrightnessDown exec brightnessctl s 5%-
+
 # switch sound in active window between sinks
 #bindsym $mod+p exec ~/.bin/sinkSwitcher
 bindsym $mod+p exec ~/.bin/portSwitch
