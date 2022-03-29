@@ -2,12 +2,8 @@
 x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop
 x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
 x-scheme-handler/tg=userapp-Kotatogram Desktop-1T1EH1.desktop
-x-scheme-handler/ytmd=youtube-music-desktop-app.desktop
-x-scheme-handler/eclipse+command=_nix_store_72p1krybhvihz4bxy9akf84y6j5b4hsp-dbeaver-21.2.5_dbeaver_.desktop
 x-scheme-handler/msteams=teams.desktop
-application/pdf=userapp-zathura-IZDNF1.desktop
 x-scheme-handler/discord-402572971681644545=discord-402572971681644545.desktop
-x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-MHBUH1.desktop
 message/rfc822=userapp-Thunderbird-MHBUH1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-MHBUH1.desktop
@@ -15,20 +11,9 @@ x-scheme-handler/webcal=userapp-Thunderbird-4AVTH1.desktop
 text/calendar=userapp-Thunderbird-4AVTH1.desktop
 application/x-extension-ics=userapp-Thunderbird-4AVTH1.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-4AVTH1.desktop
-x-scheme-handler/settings=io.elementary.switchboard.desktop
 image/png=feh.desktop;
 image/jpeg=feh.desktop;
 video/x-matroska=mpv.desktop;
+application/pdf=userapp-zathura-IZDNF1.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-43BCE1.desktop;userapp-Kotatogram Desktop-1T1EH1.desktop;
-text/x-log=pluma.desktop;
-text/plain=pluma.desktop;
-application/pdf=wps-office-pdf.desktop;userapp-zathura-IZDNF1.desktop;
-application/x-ipynb+json=google-chrome.desktop;
-video/mp4=userapp-mpv-4UK1F1.desktop;
-x-scheme-handler/mailto=userapp-Thunderbird-MHBUH1.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-MHBUH1.desktop;
-x-scheme-handler/webcal=userapp-Thunderbird-4AVTH1.desktop;
-x-scheme-handler/webcals=userapp-Thunderbird-4AVTH1.desktop;
-x-scheme-handler/settings=io.elementary.switchboard.desktop;
