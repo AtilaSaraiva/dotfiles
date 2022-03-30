@@ -126,7 +126,8 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+t [app_id="kotatogramdesktop"] scratchpad show
 bindsym $mod+Ctrl+b [app_id="com.rafaelmardojai.Blanket"] scratchpad show
 #bindsym $mod+Ctrl+d [class="Transmission-gtk"] scratchpad show
-bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
+#bindsym $mod+Ctrl+a [app_id="org.keepassxc.KeePassXC"] scratchpad show
+bindsym $mod+Ctrl+a [class="Bitwarden"] scratchpad show
 #bindsym $mod+Ctrl+q [class="youtube-music-desktop-app"] scratchpad show
 bindsym $mod+Ctrl+d [app_id="org.qbittorrent.qBittorrent"] scratchpad show
 bindsym $mod+Ctrl+s [instance="teams.microsoft.com"] scratchpad show
@@ -324,7 +325,7 @@ bindsym $mod+Pause exec systemctl suspend
 bindsym $mod+Ctrl+o exec  "rofi -show run -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 
 # keepmenu
-bindsym $mod+a exec kpmenu -m wofi
+#bindsym $mod+a exec kpmenu -m wofi
 
 # Manage audio
 bindsym $mod+comma exec amixer set Master -q 5%-
@@ -476,7 +477,8 @@ for_window [class="origin.exe"] floating enable
 for_window [app_id="kotatogramdesktop"] move scratchpad, resize set 1600 900, move position 160px 100px
 for_window [app_id="com.rafaelmardojai.Blanket"] move scratchpad
 #for_window [class="Transmission-gtk"] move scratchpad
-for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
+#for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
+for_window [class="Bitwarden"] move scratchpad
 for_window [class="youtube-music-desktop-app"] move scratchpad, resize set 1600 900, move position 160px 100px"
 #for_window [class="ICE-SSB-youtubemusic"] move scratchpad, resize set 1600 900, move position 160px 100px"
 for_window [class="Display"] floating enable
@@ -539,7 +541,8 @@ mode "apps" {
         bindsym q exec $browser "calendar.google.com";mode "default"
 
         # open keepass
-        bindsym c exec keepassxc;mode "default"
+        #bindsym c exec keepassxc;mode "default"
+        bindsym c exec bitwarden;mode "default"
 
         # open whatsapp
         bindsym z exec firefox "https://web.whatsapp.com/";mode "default"
