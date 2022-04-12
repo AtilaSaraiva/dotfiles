@@ -1,7 +1,7 @@
 [Default Applications]
 x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop
 x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
-x-scheme-handler/tg=userapp-Kotatogram Desktop-1T1EH1.desktop
+x-scheme-handler/tg=userapp-Kotatogram Desktop-0HZPK1.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/discord-402572971681644545=discord-402572971681644545.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-MHBUH1.desktop
@@ -17,3 +17,4 @@ video/x-matroska=mpv.desktop;
 application/pdf=userapp-zathura-IZDNF1.desktop
 
 [Added Associations]
+x-scheme-handler/tg=userapp-Kotatogram Desktop-0HZPK1.desktop;
