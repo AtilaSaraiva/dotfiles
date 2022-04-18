@@ -15,6 +15,6 @@ image/png=feh.desktop;
 image/jpeg=feh.desktop;
 video/x-matroska=mpv.desktop;
 application/pdf=userapp-zathura-IZDNF1.desktop
+x-scheme-handler/nxm=modorganizer2-nxm-handler.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Kotatogram Desktop-0HZPK1.desktop;

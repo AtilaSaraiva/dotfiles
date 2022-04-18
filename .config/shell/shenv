@@ -7,6 +7,7 @@
 export NIXPKGS_ALLOW_UNFREE=1
 
 # Nvidia
+export NIXPKGS_ALLOW_UNFREE=1
 export NVARCH=`uname -s`_`uname -m`; export NVARCH
 export NVCOMPILERS=$HOME/gitRepos/hpc_sdk; export NVCOMPILERS
 export MANPATH=$MANPATH:$NVCOMPILERS/$NVARCH/21.3/compilers/man; export MANPATH
