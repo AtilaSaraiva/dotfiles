@@ -1,0 +1,1 @@
+docker run --gpus all -it --rm -v $(pwd):/host_pwd -w /host_pwd nvcr.io/nvidia/nvhpc:22.3-devel-cuda_multi-ubuntu20.04
