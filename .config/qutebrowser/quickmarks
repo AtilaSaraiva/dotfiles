@@ -24,3 +24,4 @@ nixpkgs https://nixos.org/manual/nixpkgs/stable/
 nixprs https://github.com/NixOS/nixpkgs/pulls/AtilaSaraiva
 anilist https://anilist.co/home
 devito https://github.com/devitocodes/devito
+nixfork https://github.com/AtilaSaraiva/nixpkgs
