@@ -328,3 +328,6 @@ map <leader>r <Esc>/<++><Enter>"_c4l
    autocmd FileType tex inoremap ,nu $\varnothing$
    autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
    autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
+
+"""Nix
+autocmd FileType nix inoremap ,meta meta = with lib; {<Enter>description = "<++>";<Enter>homepage = "<++>";<Enter>license = licenses.<++>;<Enter>platforms.<++>;<Enter>maintainers = with maintainers; [ atila ];<Enter>};<Esc>6k^i
