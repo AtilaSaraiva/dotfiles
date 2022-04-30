@@ -509,6 +509,7 @@ exec ~/.bin/remote
 exec  blueman-tray
 exec  wlsunset -l -12.97111 -L -38.51083
 exec  sleep 20; exec  dropbox
+exec  sleep 20; exec  megasync
 #exec  hookBackup
 
 #================================================
