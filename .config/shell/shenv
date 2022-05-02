@@ -4,6 +4,7 @@
 # Shell common environment variables and functions (BusyBox compatible)
 #
 
+export NIXPKGS_ALLOW_UNFREE=1
 
 # Nvidia
 export NVARCH=`uname -s`_`uname -m`; export NVARCH
