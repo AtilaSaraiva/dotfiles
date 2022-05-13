@@ -178,7 +178,7 @@ direnv WORKON_HOME "$HOME/.local/lib/pipenvs/"
 #export PIP_REQUIRE_VIRTUALENV=false
 
 # Seimic Unix
-export CWPROOT=/opt/SeisUnix
+#export CWPROOT=/opt/SeisUnix
 appendpath "$CWPROOT/bin"
 
 
