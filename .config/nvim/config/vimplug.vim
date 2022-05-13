@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 "" Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -12,8 +14,6 @@ Plug 'LnL7/vim-nix'
 " Nerd tree
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" deoplete para autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/dense-analysis/ale'
@@ -25,22 +25,11 @@ Plug 'https://github.com/moll/vim-node'
     "Plug 'dpelle/vim-LanguageTool'   " grammar checker
 "endif
 
-"" Deoplete
-    Plug 'zchee/deoplete-jedi'     " deoplete python source
-    " TabNine deoplete: general completions every filetype
-    if has('win32') || has('win64')
-        Plug 'tbodt/deoplete-tabnine',
-            \ { 'do': 'powershell.exe .\install.ps1' }
-    else
-        Plug 'tbodt/deoplete-tabnine',
-            \ { 'do': './install.sh' }
-    endif
+" deoplete para autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Vimtex
 Plug 'https://github.com/lervag/vimtex'
-
-2026-09-39
-
 
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'AndrewRadev/splitjoin.vim'
@@ -51,8 +40,20 @@ Plug 'triglav/vim-visual-increment'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 "Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+if !exists('g:started_by_firenvim')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    "" Deoplete
+    Plug 'zchee/deoplete-jedi'     " deoplete python source
+    " TabNine deoplete: general completions every filetype
+    if has('win32') || has('win64')
+        Plug 'tbodt/deoplete-tabnine',
+            \ { 'do': 'powershell.exe .\install.ps1' }
+    else
+        Plug 'tbodt/deoplete-tabnine',
+            \ { 'do': './install.sh' }
+    endif
+endif
 Plug 'itchyny/vim-gitbranch'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }

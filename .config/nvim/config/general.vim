@@ -39,7 +39,7 @@ au FocusGained,BufEnter * :silent! !
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 	map <leader>i :setlocal spell! spelllang=pt_br <CR>
 
-" Compile C++ code from withing file
+" Compile C++ code from within file
 map <leader>c :w<CR> :!g++ -o exe % && ./exe<CR>
 
 " to execute shell commands inside neovim
@@ -59,7 +59,6 @@ autocmd VimLeave *.tex !texclear %
 autocmd BufWritePre * %s/\s\+$//e
 
 "Set default font in mac vim and gvim
-set guifont=Inconsolata\ for\ Powerline:h24
 set cursorline    " highlight the current line
 set visualbell    " stop that ANNOYING beeping
 set wildmenu
@@ -104,11 +103,14 @@ set numberwidth=5
 " set splitbelow
 set splitright
 
-" Auto resize Vim splits to active split
-set winwidth=104
-set winheight=5
-set winminheight=5
-set winheight=999
+if !exists('g:started_by_firenvim')
+    set guifont=Inconsolata\ for\ Powerline:h24
+    " Auto resize Vim splits to active split
+    set winwidth=104
+    set winheight=5
+    set winminheight=5
+    set winheight=999
+endif
 
 "HTML Editing
 set matchpairs+=<:>
