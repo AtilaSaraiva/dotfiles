@@ -92,6 +92,8 @@ settings:
     global: false
   qt.workarounds.remove_service_workers:
     global: true
+  spellcheck.languages:
+    global: null
   url.open_base_url:
     global: false
   url.searchengines:
@@ -101,7 +103,7 @@ settings:
       arch: https://wiki.archlinux.org/index.php?search={}
       gen: http://gen.lib.rus.ec/search.php?req={}
       myanime: https://myanimelist.net/anime.php?q={}
-      nix: https://search.nixos.org/packages?channel=21.11&from=0&size=50&sort=relevance&type=packages&query={}
+      nix: https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}
       olx: https://ba.olx.com.br/?q={}
       tosho: https://animetosho.org/search?q={}
       yt: https://www.youtube.com/results?search_q:uery={}
