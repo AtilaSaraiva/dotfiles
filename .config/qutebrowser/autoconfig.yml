@@ -73,6 +73,7 @@ settings:
   content.notifications.enabled:
     https://calendar.google.com: true
     https://meet.google.com: true
+    https://play.pokemonshowdown.com: true
     https://pomodoro-tracker.com: true
     https://pt.aliexpress.com: false
     https://www.chess.com: true
