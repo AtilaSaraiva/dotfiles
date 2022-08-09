@@ -57,6 +57,7 @@ settings:
   content.geolocation:
     https://internetbanking.bancointer.com.br: true
     https://portal.xpi.com.br: true
+    https://www.bestbuy.ca: false
     https://www.google.com: false
   content.javascript.can_access_clipboard:
     global: true
@@ -71,6 +72,7 @@ settings:
     https://meet.google.com: true
     https://www.onlinemictest.com: true
   content.notifications.enabled:
+    http://localhost:8096: true
     https://calendar.google.com: true
     https://meet.google.com: true
     https://play.pokemonshowdown.com: true
