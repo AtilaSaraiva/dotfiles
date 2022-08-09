@@ -489,29 +489,30 @@ for_window [instance="dropdown_terminal"] floating enable, sticky enable, resize
 #for_window [title="mpv "] move scratchpad
 #for_window [title="Steam" floating] move scratchpad
 
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
+exec --no-startup-id systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec --no-startup-id hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec mako
+exec --no-startup-id mako
 exec --no-startup-id fcitx5 -d
 #exec sleep 2 ; exec nice -n 0 qutebrowser
 #exec nice -n 0 waybar
 #exec_always nice -n 20  steam -silent
 #exec  ulauncher
-exec sleep 10 && qbittorrent
-exec kotatogram-desktop
-exec udiskie
-exec flatpak run com.valvesoftware.Steam -silent
+exec --no-startup-id sleep 10 && qbittorrent
+exec --no-startup-id kotatogram-desktop
+exec --no-startup-id udiskie
+exec --no-startup-id flatpak run com.valvesoftware.Steam -silent
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
-exec ~/.bin/remote
+exec --no-startup-id ~/.bin/remote
 #exec easyeffects
 #exec  telegram-desktop
-exec  blueman-tray
-exec  wlsunset -l -12.97111 -L -38.51083
-exec  sleep 20; exec  dropbox
-exec  sleep 20; exec  megasync
+exec  --no-startup-id blueman-tray
+exec  --no-startup-id wlsunset -l -12.97111 -L -38.51083
+exec  --no-startup-id sleep 20; exec  dropbox
+exec  --no-startup-id sleep 20; exec  megasync
+exec  --no-startup-id jellyfin-mpv-shim
 #exec  hookBackup
 
 #================================================
