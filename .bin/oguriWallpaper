@@ -1,4 +1,5 @@
 killall oguri
+kill $(pgrep mpvpaper)
 mkdir -p $HOME/.config/oguri
 touch $HOME/.config/oguri/config
 if [[ $1 == "animated" ]];
