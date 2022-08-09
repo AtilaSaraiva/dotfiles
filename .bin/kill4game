@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
-kill $(pgrep telegram) &
+kill $(pgrep kotatogram) &
 kill $(pgrep qutebrowser) &
 kill $(pgrep firefox) &
 kill $(pgrep qbittorrent) &
-kill $(pgrep safeeyes) &
 kill $(pgrep electron | head -n 1) &
-kill $(pgrep ulauncher) &
+kill $(pgrep chrome) &
 kill $(pgrep dropbox) &
+kill $(pgrep megasync) &
 sudo energyPlan performance

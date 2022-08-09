@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
-telegram-desktop &
+kotatogram-desktop &
 qutebrowser &
 qbittorrent &
-safeeyes &
-ulauncher &
 dropbox &
+megasync &
 sudo energyPlan ondemand
