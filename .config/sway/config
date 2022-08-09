@@ -438,7 +438,7 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 set $oguriWallpaper $HOME/.bin/oguriWallpaper
 set $animatedWallpaper $HOME/.bin/animatedWallpaper
 bindsym --release $mod+i  exec $oguriWallpaper animated
-bindsym $mod+dead_acute+i exec $oguriWallpaper static
+bindsym $mod+Shift+dead_acute exec $oguriWallpaper static
 bindsym --release $mod+dead_acute exec $animatedWallpaper
 set $wallpapers_path $HOME/Files/Imagens/Favoritos
 #output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill

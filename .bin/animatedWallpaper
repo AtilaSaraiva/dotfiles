@@ -1,3 +1,4 @@
 killall oguri
+kill $(pgrep mpvpaper)
 mpvpaper -o "no-audio hwdec=auto-safe hwdec-codecs=all vo=gpu gpu-dumb-mode=yes --loop" HDMI-A-1 https://www.youtube.com/watch\?v\=aJlSQiELKhw &
 mpvpaper -o "no-audio hwdec=auto-safe hwdec-codecs=all vo=gpu gpu-dumb-mode=yes --loop" HDMI-A-2 https://www.youtube.com/watch?v=IOwonY19Gsw &
