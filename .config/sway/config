@@ -501,7 +501,7 @@ exec --no-startup-id fcitx5 -d
 #exec nice -n 0 waybar
 #exec_always nice -n 20  steam -silent
 #exec  ulauncher
-exec --no-startup-id sleep 10 && --no-startup-id qbittorrent
+exec --no-startup-id sleep 10; exec --no-startup-id qbittorrent
 exec --no-startup-id kotatogram-desktop
 exec --no-startup-id udiskie
 exec --no-startup-id flatpak run com.valvesoftware.Steam -silent
@@ -513,9 +513,9 @@ exec --no-startup-id ~/.bin/remote
 #exec  telegram-desktop
 exec  --no-startup-id blueman-tray
 exec  --no-startup-id wlsunset -l -12.97111 -L -38.51083
-exec  --no-startup-id sleep 20; exec --no-startup-id dropbox
-exec  --no-startup-id sleep 20; exec --no-startup-id megasync
-exec  --no-startup-id jellyfin-mpv-shim
+exec  --no-startup-id sleep 20; exec  --no-startup-id dropbox
+exec  --no-startup-id sleep 20; exec  --no-startup-id megasync
+exec  --no-startup-id sleep 10; exec  --no-startup-id jellyfin-mpv-shim
 #exec  hookBackup
 
 #================================================
