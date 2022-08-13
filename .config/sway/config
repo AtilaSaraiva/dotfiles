@@ -443,8 +443,8 @@ bindsym --release $mod+dead_acute exec $animatedWallpaper
 set $wallpapers_path $HOME/Files/Imagens/Favoritos
 #output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill
 #output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
-#exec --no-startup-id $oguriWallpaper static
-exec --no-startup-id $animatedWallpaper static
+exec --no-startup-id $oguriWallpaper static
+#exec --no-startup-id $animatedWallpaper static
 #exec ~/.bin/changeWallpaper
 
 #bindsym $mod+i exec output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill; exec output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
