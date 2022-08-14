@@ -504,7 +504,7 @@ exec --no-startup-id fcitx5 -d
 exec --no-startup-id sleep 10; exec --no-startup-id qbittorrent
 exec --no-startup-id kotatogram-desktop
 exec --no-startup-id udiskie
-exec --no-startup-id flatpak run com.valvesoftware.Steam -silent
+exec --no-startup-id flatpak run com.valvesoftware.Steam -silent -pipewire-dmabuf
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
@@ -566,7 +566,7 @@ mode "apps" {
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
         #bindsym s exec steam;mode "default"
-        bindsym s exec flatpak run com.valvesoftware.Steam;mode "default"
+        bindsym s exec flatpak run com.valvesoftware.Steam -pipewire-dmabuf;mode "default"
 
         # lutris
         bindsym d exec lutris;mode "default"
