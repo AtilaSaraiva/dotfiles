@@ -1,0 +1,4 @@
+for f in $@; do
+    file=$(basename $f .pdf)
+    pdftk $file.pdf output ${file}_protected.pdf user_pw ufba2022
+done
