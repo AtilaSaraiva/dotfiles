@@ -1,0 +1,1 @@
+scanimage --format=jpeg --output-file $1 --progress --mode Color --resolution 600 --compression JPEG
