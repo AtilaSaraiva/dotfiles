@@ -20,6 +20,7 @@ set $term kitty
 set $browser QT_QPA_PLATFORM=wayland qutebrowser
 set $teams flatpak run com.github.IsmaelMartinez.teams_for_linux
 set $music google-chrome-stable --app="https://music.youtube.com/"
+set $todo  google-chrome-stable --app="https://trello.com/b/PtPUWPeM/doutorado-e-vida-profissional"
 
 set $firefox "MOZ_ENABLE_WAYLAND=1 firefox"
 
@@ -133,6 +134,7 @@ bindsym $mod+Ctrl+d [app_id="org.qbittorrent.qBittorrent"] scratchpad show
 bindsym $mod+Ctrl+p [app_id="planner"] scratchpad show
 bindsym $mod+Ctrl+s [instance="teams-for-linux"] scratchpad show
 bindsym $mod+Ctrl+q [instance="music.youtube.com"] scratchpad show
+bindsym $mod+Ctrl+w [instance="trello.com__b_PtPUWPeM_doutorado-e-vida-profissional"] scratchpad show
 bindsym $mod+Ctrl+r [class="Slack"] scratchpad show
 bindsym $mod+Ctrl+e [class="Element"] scratchpad show
 
@@ -472,6 +474,7 @@ for_window [app_id="org.qbittorrent.qBittorrent"] move scratchpad
 for_window [app_id="planner"] move scratchpad
 for_window [instance="teams-for-linux"] move scratchpad, resize set 1600 900, move position 160px 100px"
 for_window [instance="music.youtube.com"] move scratchpad, resize set 1600 900, move position 160px 100px"
+for_window [instance="trello.com__b_PtPUWPeM_doutorado-e-vida-profissional"] move scratchpad, resize set 1600 900, move position 160px 100px"
 for_window [app_id="com.github.wwmm.easyeffects"] move scratchpad
 for_window [class="Element"] move scratchpad
 for_window [class="steam"] floating enable
@@ -513,6 +516,7 @@ exec --no-startup-id ~/.bin/remote
 #exec  telegram-desktop
 exec  --no-startup-id blueman-tray
 exec  --no-startup-id wlsunset -l -12.97111 -L -38.51083
+exec  --no-startup-id $todo
 exec  --no-startup-id sleep 20; exec  --no-startup-id dropbox
 exec  --no-startup-id sleep 20; exec  --no-startup-id megasync
 exec  --no-startup-id sleep 10; exec  --no-startup-id jellyfin-mpv-shim
@@ -585,6 +589,9 @@ mode "apps" {
 
         # teams
         bindsym t exec $teams;mode "default"
+
+        # trello
+        bindsym w exec $todo;mode "default"
 
         # $firefox private
         bindsym g exec $firefox -private-window;mode "default"
