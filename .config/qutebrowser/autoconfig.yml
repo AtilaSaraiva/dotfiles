@@ -59,6 +59,7 @@ settings:
     https://portal.xpi.com.br: true
     https://www.bestbuy.ca: false
     https://www.google.com: false
+    https://www.ubereats.com: true
   content.javascript.can_access_clipboard:
     global: true
   content.media.audio_capture:
@@ -74,6 +75,7 @@ settings:
   content.notifications.enabled:
     http://localhost:8096: true
     https://calendar.google.com: true
+    https://gitter.im: true
     https://mail.google.com: true
     https://meet.google.com: true
     https://play.pokemonshowdown.com: true
