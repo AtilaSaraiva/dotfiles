@@ -1,0 +1,15 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p rsync ouch xdragon
+
+if [ "$1" != "" ]; then
+    FOLDERPATH=$1
+    FOLDERNAME=${FOLDERPATH##*/}
+
+    rsync -r ogbon:$FOLDERPATH /tmp/$FOLDERNAME
+    ouch compress /tmp/$FOLDERNAME /tmp/$FOLDERNAME.tar.gz
+    rm -r /tmp/$FOLDERNAME &
+    dragon /tmp/$FOLDERNAME.tar.gz
+    rm /tmp/$FOLDERNAME.tar.gz
+else
+    echo "please input the folder path on ogbon"
+fi
