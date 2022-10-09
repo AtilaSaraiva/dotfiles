@@ -34,6 +34,9 @@ set $site6 "https://docs.google.com/spreadsheets/d/15XVyZg2Ex_1nTYfA9W8qUAl1NRAx
 set $mon0 HDMI-A-1
 set $mon1 HDMI-A-2
 
+output DP-2 adaptive_sync on mode 2560x1440@164.999Hz
+
+
 #================================================
 #====================Fonts=======================
 #================================================
