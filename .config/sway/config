@@ -435,6 +435,17 @@ focus_follows_mouse no
 #Lock screen binding.
 #bindsym $mod+shift+z exec betterlockscreen -l dim
 bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf -n 1`
+#bindsym $mod+shift+z exec swaylock -c 000000
+#bindsym $mod+shift+z exec output DP-2 dpsm on
+         #timeout 30 'swaylock -f -c 000000' \
+
+
+exec swayidle -w \
+         timeout 600 'swaymsg "output DP-2 dpms off"' resume 'swaymsg "output DP-2 dpms on"' \
+
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
+
 
 # set desktop background with custom effect
 #exec  betterlockscreen -w dim
@@ -442,7 +453,7 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 # change wallpaper
 set $oguriWallpaper $HOME/.bin/oguriWallpaper
 set $animatedWallpaper $HOME/.bin/animatedWallpaper
-bindsym --release $mod+i  exec $oguriWallpaper animated
+bindsym --release $mod+i  exec $oguriWallpaper static
 bindsym $mod+Shift+dead_acute exec $oguriWallpaper static
 bindsym --release $mod+dead_acute exec $animatedWallpaper
 set $wallpapers_path $HOME/Files/Imagens/Favoritos
