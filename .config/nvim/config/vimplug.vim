@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plugin 'BeneCollyridam/futhark-vim'
+
 Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
