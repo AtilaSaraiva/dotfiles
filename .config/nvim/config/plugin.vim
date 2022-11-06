@@ -3,6 +3,8 @@ set nocompatible
 filetype plugin on
 syntax on
 
+let g:latex_to_unicode_auto = 1
+
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 

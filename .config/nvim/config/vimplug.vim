@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'JuliaEditorSupport/julia-vim'
+
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 "" Use release branch (recommend)
