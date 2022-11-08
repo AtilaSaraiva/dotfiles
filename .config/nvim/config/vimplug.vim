@@ -1,6 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plugin 'BeneCollyridam/futhark-vim'
+Plug 'BeneCollyridam/futhark-vim'
 
 Plug 'JuliaEditorSupport/julia-vim'
 
