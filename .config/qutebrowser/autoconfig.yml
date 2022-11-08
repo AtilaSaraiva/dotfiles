@@ -112,6 +112,7 @@ settings:
       nix: https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}
       olx: https://ba.olx.com.br/?q={}
       tosho: https://animetosho.org/search?q={}
+      track: https://nixpk.gs/pr-tracker.html?pr={}
       yt: https://www.youtube.com/results?search_q:uery={}
   zoom.default:
     global: '120'
