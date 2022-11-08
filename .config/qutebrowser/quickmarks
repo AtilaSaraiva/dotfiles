@@ -32,3 +32,4 @@ jellyfin http://10.100.0.202:8096/web/index.html#!/home.html
 sonarr http://localhost:8989/
 bazarr http://localhost:6767/series
 hastebin https://hastebin.com/about.md
+halide https://github.com/halide/Halide
