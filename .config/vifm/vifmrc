@@ -181,6 +181,9 @@ filextype *.vpl sfpen <%c %i&
 " Suximage
 filextype *.su suximage <%c perc=98 &
 
+" Xournal++
+filextype *.xopp xournalpp %c &
+
 " Pdf
 filextype *.epub zathura %c %i &
 
