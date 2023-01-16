@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Check if the file /tmp/freesync exists
+if [ -f "/tmp/freesync" ]; then
+    # Check if the file contains the number 0
+    if grep -q "0" "/tmp/freesync"; then
+        swaymsg "output * adaptive_sync on"
+        # Change the value in the file to 1
+        sed -i 's/0/1/g' "/tmp/freesync"
+    else
+        swaymsg "output * adaptive_sync off"
+        sed -i 's/1/0/g' "/tmp/freesync"
+    fi
+else
+    swaymsg "output * adaptive_sync on"
+    echo "1" > "/tmp/freesync"
+fi
