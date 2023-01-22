@@ -590,7 +590,7 @@ mode "apps" {
         #bindsym s exec flatpak run com.valvesoftware.Steam -pipewire-dmabuf;mode "default"
 
         # lutris
-        bindsym d exec lutris;mode "default"
+        bindsym d exec env -u WAYLAND_DISPLAY lutris;mode "default"
 
         # yuzu
         bindsym y exec "QT_QPA_PLATFORM=xcb yuzu";mode "default"
