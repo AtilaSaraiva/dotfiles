@@ -35,8 +35,9 @@ set $site6 "https://docs.google.com/spreadsheets/d/15XVyZg2Ex_1nTYfA9W8qUAl1NRAx
 set $mon0 HDMI-A-1
 set $mon1 HDMI-A-2
 
-output DP-2 adaptive_sync on mode 2560x1440@164.999Hz
+output DP-2 adaptive_sync off mode 2560x1440@164.999Hz
 
+bindsym $mod+ccedilla exec ~/.bin/toggleFreesync
 
 #================================================
 #====================Fonts=======================
@@ -313,7 +314,6 @@ bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 #====================Misc========================
 #================================================
 
-
 bindsym $mod+Shift+semicolon exec qutebrowser http://127.0.0.1:3875
 bindsym $mod+semicolon exec makoctl dismiss --all
 
@@ -524,7 +524,7 @@ exec --no-startup-id fcitx5 -d
 exec --no-startup-id sleep 10; exec --no-startup-id qbittorrent
 exec --no-startup-id kotatogram-desktop
 exec --no-startup-id udiskie
-exec --no-startup-id flatpak run com.valvesoftware.Steam -silent -pipewire-dmabuf
+#exec --no-startup-id flatpak run com.valvesoftware.Steam -silent -pipewire-dmabuf
 #exec  sleep 5 ; exec ~/.bin/remote
 #exec  sleep 30 ; exec  safeeyes
 #exec  sleep 40 ; exec ytmdesktop
@@ -559,7 +559,7 @@ bindsym $mod+y mode "work"
 mode "apps" {
         # open youtube music
         #bindsym m exec ytmdesktop;mode "default"
-        bindsym m exec $music;mode "default"
+        bindsym m exec $music;[instance="spotify"] scratchpad show; mode "default"
         #bindsym m exec firefox --class ICE-SSB-youtubemusic --profile $HOME/.local/share/ice/$firefox/youtubemusic --no-remote https://music.youtube.com;mode "default"
 
         # open netflix
@@ -586,8 +586,8 @@ mode "apps" {
 
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
-        #bindsym s exec steam;mode "default"
-        bindsym s exec flatpak run com.valvesoftware.Steam -pipewire-dmabuf;mode "default"
+        bindsym s exec steam;mode "default"
+        #bindsym s exec flatpak run com.valvesoftware.Steam -pipewire-dmabuf;mode "default"
 
         # lutris
         bindsym d exec lutris;mode "default"
