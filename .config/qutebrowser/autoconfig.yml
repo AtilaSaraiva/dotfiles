@@ -105,7 +105,7 @@ settings:
   url.searchengines:
     global:
       DEFAULT: https://duckduckgo.com/?q={}
-      am: https://www.amazon.com.br/s?k={}
+      am: https://www.amazon.ca/s?k={}
       arch: https://wiki.archlinux.org/index.php?search={}
       gen: http://gen.lib.rus.ec/search.php?req={}
       myanime: https://myanimelist.net/anime.php?q={}
