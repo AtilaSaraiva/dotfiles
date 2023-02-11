@@ -17,6 +17,8 @@ alias ogbonGitlab='ssh -L 9000:172.25.0.77:80 ogbon'
 
 alias senaigit='ssh -L 9000:172.25.0.77:80 -p 5001 ogbon'
 
+alias ju='julia -t auto --project=.'
+
 
 # Completion for existing commands
 [[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
