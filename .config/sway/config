@@ -532,10 +532,11 @@ exec --no-startup-id ~/.bin/remote
 #exec easyeffects
 #exec  telegram-desktop
 exec  --no-startup-id blueman-tray
+exec  --no-startup-id transmission-qt
 exec  --no-startup-id wlsunset -l -12.97111 -L -38.51083
 exec  --no-startup-id $todo
 exec  --no-startup-id sleep 20; exec  --no-startup-id dropbox
-exec  --no-startup-id sleep 20; exec  --no-startup-id megasync
+exec  --no-startup-id sleep 20; exec  --no-startup-id flatpak run nz.mega.MEGAsync
 exec  --no-startup-id sleep 10; exec  --no-startup-id jellyfin-mpv-shim
 #exec  hookBackup
 
@@ -718,7 +719,7 @@ input 16700:8467:Dell_KB216_Wired_Keyboard {
     xkb_options caps:swapescape
 }
 input 1386:890:Wacom_One_by_Wacom_S_Pen {
-    left_handed "enabled"
+    #left_handed "enabled"
 }
 input type:touchpad {
     tap "enabled"
