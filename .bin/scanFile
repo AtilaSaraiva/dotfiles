@@ -1,1 +1,1 @@
-scanimage --format=jpeg --output-file $1 --progress --mode Color --resolution 600 --compression JPEG
+scanimage --format=jpeg --output-file $1 --progress --mode Color --resolution 600 --device escl:http://10.0.0.132:80

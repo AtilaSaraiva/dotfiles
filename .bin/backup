@@ -1,14 +1,13 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
-backupDirList=$HOME/.dotfiles/backupdir
+backupDirList=$HOME/Files/Mega/backupdirs
 #for dir in $(cat $backupDirList); do
     #echo $dir
     ##cd $dir
     ##duplicacy backup
 #done
+cd $HOME
 while IFS='' read -r LINE || [ -n "${LINE}" ]; do
     echo "processing line: ${LINE}"
-    cd $LINE
-    duplicacy backup
-    duplicacy prune -keep 7:4
+    kopia snapshot "$LINE"
 done < $backupDirList
