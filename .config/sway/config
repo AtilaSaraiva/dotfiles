@@ -441,7 +441,7 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 #bindsym $mod+shift+z exec output DP-2 dpsm on
          #timeout 30 'swaylock -f -c 000000' \
 
-exec_always swayidle -w \
+exec swayidle -w \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f --image `find ~/Files/Imagens/Favoritos -type f | shuf -n 1`' \
 
