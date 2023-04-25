@@ -441,9 +441,9 @@ bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf
 #bindsym $mod+shift+z exec output DP-2 dpsm on
          #timeout 30 'swaylock -f -c 000000' \
 
-
-exec swayidle -w \
-         timeout 600 'swaymsg "output DP-2 dpms off"' resume 'swaymsg "output DP-2 dpms on"' \
+exec_always swayidle -w \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f --image `find ~/Files/Imagens/Favoritos -type f | shuf -n 1`' \
 
 for_window [class=".*"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen
