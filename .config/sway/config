@@ -718,6 +718,11 @@ input 16700:8467:Dell_KB216_Wired_Keyboard {
     xkb_layout us
     xkb_options caps:swapescape
 }
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout us,us
+    xkb_variant intl,dvp
+    xkb_options caps:swapescape,grp:alts_toggle
+}
 input 1386:890:Wacom_One_by_Wacom_S_Pen {
     #left_handed "enabled"
 }
