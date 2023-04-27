@@ -32,10 +32,9 @@ set $site4 "https://eduardocavalcanti.com/"
 set $site5 "https://vicenteguimaraes.penserico.com/dashboard.pr"
 set $site6 "https://docs.google.com/spreadsheets/d/15XVyZg2Ex_1nTYfA9W8qUAl1NRAxo9g9HCSlAeqwVhw/edit?folder=0AMLx_qjqAT5PUk9PVA#gid=0"
 
-set $mon0 HDMI-A-1
+set $mon0 DP-2
 set $mon1 HDMI-A-2
 
-output DP-2 adaptive_sync on mode 2560x1440@164.999Hz
 
 bindsym $mod+ccedilla exec ~/.bin/toggleFreesync
 
@@ -117,7 +116,7 @@ bindsym $mod+d exec $menu
 workspace_auto_back_and_forth yes
 
 # turn off second monitor
-bindsym $mod+backslash output HDMI-A-1 toggle
+bindsym $mod+backslash output $mon1 toggle
 
 # Toggle focus between monitors
 bindsym $mod+u focus output left
@@ -290,19 +289,19 @@ workspace 2 output secondary
 #================================================
 
 
-output $mon0 pos 0 0 res 1920x1080
-output $mon1 pos 1920 0 res 1920x1080
+output $mon0 adaptive_sync on mode 2560x1440@164.999Hz pos 0 0
+output $mon1 pos 2560 0 mode 3840x2160@60.000Hz
 
-focus output $mon1
+focus output $mon0
 
 # Swap workspaces between displays
 bindsym $mod+c exec ~/.bin/sway-display-swap.sh
 
 # Assing certain workspaces to certain outputs
 #workspace 10 output HDMI-0
-workspace 9 output HDMI-0
+workspace 9 output $mon0
 #workspace 6 output HDMI-0
-workspace 1 output DVI-D-0
+workspace 1 output $mon0
 
 # read 1 character and mark the current window with this character
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
