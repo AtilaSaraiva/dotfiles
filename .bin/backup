@@ -9,5 +9,5 @@ backupDirList=$HOME/Files/Mega/backupdirs
 cd $HOME
 while IFS='' read -r LINE || [ -n "${LINE}" ]; do
     echo "processing line: ${LINE}"
-    kopia snapshot "$LINE"
+    kopia snapshot create "$LINE"
 done < $backupDirList
