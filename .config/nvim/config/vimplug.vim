@@ -43,20 +43,21 @@ Plug 'dbeniamine/cheat.sh-vim'
 Plug 'triglav/vim-visual-increment'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'github/copilot.vim'
 "Plug 'tpope/vim-commentary'
 if !exists('g:started_by_firenvim')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     "" Deoplete
-    Plug 'zchee/deoplete-jedi'     " deoplete python source
+    "Plug 'zchee/deoplete-jedi'     " deoplete python source
     " TabNine deoplete: general completions every filetype
-    if has('win32') || has('win64')
-        Plug 'tbodt/deoplete-tabnine',
-            \ { 'do': 'powershell.exe .\install.ps1' }
-    else
-        Plug 'tbodt/deoplete-tabnine',
-            \ { 'do': './install.sh' }
-    endif
+    "if has('win32') || has('win64')
+        "Plug 'tbodt/deoplete-tabnine',
+            "\ { 'do': 'powershell.exe .\install.ps1' }
+    "else
+        "Plug 'tbodt/deoplete-tabnine',
+            "\ { 'do': './install.sh' }
+    "endif
 endif
 Plug 'itchyny/vim-gitbranch'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
