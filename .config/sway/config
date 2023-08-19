@@ -586,8 +586,8 @@ mode "apps" {
 
         # steam
         #bindsym s exec steam-native -nojoy -novid -d3d9ex -high;mode "default"
-        bindsym s exec steam;mode "default"
-        #bindsym s exec flatpak run com.valvesoftware.Steam -pipewire-dmabuf;mode "default"
+        #bindsym s exec steam;mode "default"
+        bindsym s exec flatpak run com.valvesoftware.Steam;mode "default"
 
         # lutris
         bindsym d exec env -u WAYLAND_DISPLAY lutris;mode "default"
