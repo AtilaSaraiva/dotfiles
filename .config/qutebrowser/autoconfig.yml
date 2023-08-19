@@ -57,6 +57,7 @@ settings:
   content.geolocation:
     https://internetbanking.bancointer.com.br: true
     https://portal.xpi.com.br: true
+    https://sacdigital.ba.gov.br: true
     https://www.bestbuy.ca: false
     https://www.google.com: false
     https://www.ubereats.com: true
@@ -81,6 +82,7 @@ settings:
     https://play.pokemonshowdown.com: true
     https://pomodoro-tracker.com: true
     https://pt.aliexpress.com: false
+    https://sacdigital.ba.gov.br: true
     https://www.chess.com: true
     https://www.kabum.com.br: false
     https://www.pcworld.com: false
