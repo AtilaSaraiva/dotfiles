@@ -15,9 +15,6 @@ Plug 'voldikss/vim-floaterm'
 " vim-nix
 Plug 'LnL7/vim-nix'
 
-" Nerd tree
-Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
 
 "Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/dense-analysis/ale'

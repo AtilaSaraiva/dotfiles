@@ -8,7 +8,6 @@ let g:latex_to_unicode_auto = 1
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-let g:NERDTreeHijackNetrw = 0 " Add this line if you use NERDTree
 let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 
 " fix code
@@ -53,10 +52,15 @@ let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 " setting a little delay for windows to appear
 "call deoplete#custom#option('auto_complete_delay', 50)
 
+
+
+
 " Vimtex options
 
     let g:tex_flavor = "latex"
     let g:vimtex_complete_close_braces = 1
+    let g:vimtex_view_method = 'zathura'
+
   " A expressão abaixo tem como função habilitar autocompletação utilizando deoplete
 "  if !exists('g:deoplete#omni#input_patterns')
 "      let g:deoplete#omni#input_patterns = {}

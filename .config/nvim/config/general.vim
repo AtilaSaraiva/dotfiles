@@ -64,6 +64,14 @@ set visualbell    " stop that ANNOYING beeping
 set wildmenu
 set wildmode=list:longest,full
 
+set foldmethod=marker
+"" auto-save fold views
+"augroup AutoSaveFolds
+    "autocmd!
+    "autocmd BufWinEnter *.* silent! loadview
+"augroup END
+
+
 "Allow usage of mouse in iTerm
 set ttyfast
 set mouse=a
