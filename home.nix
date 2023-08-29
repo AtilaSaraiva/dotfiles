@@ -57,6 +57,10 @@ in
     "mpv/mpv.conf".source = ./mpv/mpv.conf;
     "zathura/zathurarc".source = ./zathura/zathurarc;
     "kitty/kitty.conf".source = ./kitty/kitty.conf;
+    "waybar" = {
+      source = ./waybar;
+      recursive = true;
+    };
     "lf" = {
       source = ./lf;
       recursive = true;
