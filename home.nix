@@ -36,6 +36,7 @@
     source = ./nvim/config;
     recursive = true;
   };
+  xdg.configFile."vifm/vifmrc".source = ./vifm/vifmrc;
 
   home.stateVersion = "21.05";
 }
