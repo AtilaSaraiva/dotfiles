@@ -49,6 +49,10 @@ in
     "mpv/mpv.conf".source = ./mpv/mpv.conf;
     "zathura/zathurarc".source = ./zathura/zathurarc;
     "kitty/kitty.conf".source = ./kitty/kitty.conf;
+    "lf" = {
+      source = ./lf;
+      recursive = true;
+    };
   };
 
   home.stateVersion = "21.05";
