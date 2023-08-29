@@ -2,6 +2,12 @@
 
 let
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/atila/Files/Codigos/repos/dotfiles";
+  vim-plug = pkgs.fetchFromGitHub {
+    owner = "junegunn";
+    repo = "vim-plug";
+    rev = "ca0ae0a8b1bd6380caba2d8be43a2a19baf7dbe2";
+    sha256 = "1ay2f1liya4ycf7ybiqhz02sywxkw7vhschl2kwl5hvxjahpi9p7";
+  };
 in
 {
   imports = [
@@ -34,6 +40,7 @@ in
   };
 
   home.file.".ssh/config".source = ./.ssh;
+  home.file.".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
 
   xdg.configFile = {
     "vifm/vifmrc".source = ./vifm/vifmrc;
