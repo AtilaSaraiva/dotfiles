@@ -48,6 +48,7 @@ in
     "tmux/tmux.conf".source = ./tmux/tmux.conf;
     "mpv/mpv.conf".source = ./mpv/mpv.conf;
     "zathura/zathurarc".source = ./zathura/zathurarc;
+    "kitty/kitty.conf".source = ./kitty/kitty.conf;
   };
 
   home.stateVersion = "21.05";
