@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/atila/Files/Codigos/repos/dotfiles";
+in
 {
   imports = [
     ./zsh.nix
@@ -38,6 +41,9 @@
   };
   xdg.configFile."vifm/vifmrc".source = ./vifm/vifmrc;
   xdg.configFile."sway/config".source = ./sway/config;
+  xdg.configFile."qutebrowser/autoconfig.yml".source = "${dotfiles}/qutebrowser/autoconfig.yml";
+  xdg.configFile."qutebrowser/quickmarks".source = "${dotfiles}/qutebrowser/quickmarks";
+  xdg.configFile."qutebrowser/bookmarks/urls".source = "${dotfiles}/qutebrowser/bookmarks/urls";
 
   home.stateVersion = "21.05";
 }
