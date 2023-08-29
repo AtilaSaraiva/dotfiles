@@ -62,10 +62,6 @@ set novimhelp
 
 set norunexec
 
-" Selected color scheme
-
-colorscheme Default
-
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
 " See man date or man strftime for details.
