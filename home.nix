@@ -30,5 +30,12 @@
     };
   };
 
+  home.file.".ssh/config".source = ./.ssh;
+  xdg.configFile."nvim/init.vim".source = ./nvim/init.vim;
+  xdg.configFile."nvim/config" = {
+    source = ./nvim/config;
+    recursive = true;
+  };
+
   home.stateVersion = "21.05";
 }
