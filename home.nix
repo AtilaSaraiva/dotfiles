@@ -47,6 +47,7 @@ in
     };
     "tmux/tmux.conf".source = ./tmux/tmux.conf;
     "mpv/mpv.conf".source = ./mpv/mpv.conf;
+    "zathura/zathurarc".source = ./zathura/zathurarc;
   };
 
   home.stateVersion = "21.05";
