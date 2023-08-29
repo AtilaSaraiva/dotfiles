@@ -34,6 +34,7 @@ in
   };
 
   home.file.".ssh/config".source = ./.ssh;
+
   xdg.configFile = {
     "vifm/vifmrc".source = ./vifm/vifmrc;
     "sway/config".source = ./sway/config;
