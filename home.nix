@@ -46,6 +46,7 @@ in
       recursive = true;
     };
     "tmux/tmux.conf".source = ./tmux/tmux.conf;
+    "mpv/mpv.conf".source = ./mpv/mpv.conf;
   };
 
   home.stateVersion = "21.05";
