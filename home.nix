@@ -45,6 +45,7 @@ in
       source = ./nvim/config;
       recursive = true;
     };
+    "tmux/tmux.conf".source = ./tmux/tmux.conf;
   };
 
   home.stateVersion = "21.05";
