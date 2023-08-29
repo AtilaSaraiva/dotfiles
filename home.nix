@@ -34,16 +34,18 @@ in
   };
 
   home.file.".ssh/config".source = ./.ssh;
-  xdg.configFile."nvim/init.vim".source = ./nvim/init.vim;
-  xdg.configFile."nvim/config" = {
-    source = ./nvim/config;
-    recursive = true;
+  xdg.configFile = {
+    "vifm/vifmrc".source = ./vifm/vifmrc;
+    "sway/config".source = ./sway/config;
+    "qutebrowser/autoconfig.yml".source = "${dotfiles}/qutebrowser/autoconfig.yml";
+    "qutebrowser/quickmarks".source = "${dotfiles}/qutebrowser/quickmarks";
+    "qutebrowser/bookmarks/urls".source = "${dotfiles}/qutebrowser/bookmarks/urls";
+    "nvim/init.vim".source = ./nvim/init.vim;
+    "nvim/config" = {
+      source = ./nvim/config;
+      recursive = true;
+    };
   };
-  xdg.configFile."vifm/vifmrc".source = ./vifm/vifmrc;
-  xdg.configFile."sway/config".source = ./sway/config;
-  xdg.configFile."qutebrowser/autoconfig.yml".source = "${dotfiles}/qutebrowser/autoconfig.yml";
-  xdg.configFile."qutebrowser/quickmarks".source = "${dotfiles}/qutebrowser/quickmarks";
-  xdg.configFile."qutebrowser/bookmarks/urls".source = "${dotfiles}/qutebrowser/bookmarks/urls";
 
   home.stateVersion = "21.05";
 }
