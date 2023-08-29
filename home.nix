@@ -39,8 +39,11 @@ in
     };
   };
 
-  home.file.".ssh/config".source = ./.ssh;
-  home.file.".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
+  home.file = {
+    ".ssh/config".source = ./.ssh;
+    ".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
+    ".julia/config/startup.jl".source = ./julia/startup.jl;
+  };
 
   xdg.configFile = {
     "vifm/vifmrc".source = ./vifm/vifmrc;
