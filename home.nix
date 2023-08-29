@@ -37,6 +37,7 @@
     recursive = true;
   };
   xdg.configFile."vifm/vifmrc".source = ./vifm/vifmrc;
+  xdg.configFile."sway/config".source = ./sway/config;
 
   home.stateVersion = "21.05";
 }
