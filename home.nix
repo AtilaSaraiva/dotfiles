@@ -40,7 +40,7 @@ in
   };
 
   home.file = {
-    ".ssh/config".source = ./.ssh;
+    ".ssh/config".source = ./.ssh/config;
     ".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
     ".julia/config/startup.jl".source = ./julia/startup.jl;
   };
