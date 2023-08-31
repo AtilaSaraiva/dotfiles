@@ -13,6 +13,7 @@
       l = "exa -l";
       la = "exa -la";
       ip = "ip --color=auto";
+      cleanBranches = "git branch --merged | grep -v \* | xargs git branch -D";
     };
 
     history = {
