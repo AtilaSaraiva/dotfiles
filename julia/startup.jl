@@ -1,5 +1,6 @@
 using Revise
 using OhMyREPL
+using BenchmarkTools
 
 function template()
     @eval begin
