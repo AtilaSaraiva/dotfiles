@@ -21,3 +21,6 @@ function template()
            ])
     end
 end
+
+using Debugger, JuliaInterpreter, MethodAnalysis;
+union!(JuliaInterpreter.compiled_modules, child_modules(Base));
