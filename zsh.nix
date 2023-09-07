@@ -14,10 +14,12 @@
       la = "exa -la";
       ip = "ip --color=auto";
       cleanBranches = "git branch --merged | grep -v \* | xargs git branch -D";
+      julia = "LD_LIBRARY_PATH=/run/opengl-driver/lib/ julia";
+      jl = "LD_LIBRARY_PATH=/run/opengl-driver/lib/ julia --project -t auto";
     };
 
     history = {
-      size = 10000;
+      size = 10000000;
       share = true;
       ignoreSpace = true;
     };
