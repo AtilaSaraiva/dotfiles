@@ -1,5 +1,8 @@
 using OhMyREPL
 using Revise
+if isinteractive()
+    @eval using VimBindings
+end
 
 function template()
     @eval begin
