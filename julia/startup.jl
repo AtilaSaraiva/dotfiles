@@ -1,3 +1,6 @@
+using OhMyREPL
+using Revise
+
 function template()
     @eval begin
         using PkgTemplates
