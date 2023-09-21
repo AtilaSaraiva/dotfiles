@@ -435,14 +435,15 @@ focus_follows_mouse no
 
 #Lock screen binding.
 #bindsym $mod+shift+z exec betterlockscreen -l dim
-bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf -n 1`
+#bindsym $mod+shift+z exec swaylock --image `find $wallpapers_path -type f | shuf -n 1`
+bindsym $mod+shift+z exec swaylock --clock --indicator --fade-in 0.2 --screenshots --effect-vignette 0.5:0.5 --effect-blur 7x5
 #bindsym $mod+shift+z exec swaylock -c 000000
 #bindsym $mod+shift+z exec output DP-2 dpsm on
          #timeout 30 'swaylock -f -c 000000' \
 
 exec swayidle -w \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f --image `find ~/Files/Imagens/Favoritos -type f | shuf -n 1`' \
+         before-sleep 'swaylock --clock --indicator --fade-in 0.2 --screenshots --effect-vignette 0.5:0.5 --effect-blur 7x5' \
 
 for_window [class=".*"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen
