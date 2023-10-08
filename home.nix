@@ -37,6 +37,11 @@ in
       lgb = "log --graph --decorate --oneline --abbrev-commit --all --date=relative --name-status";
       cia = "commit --amend";
     };
+    extraConfig = {
+      core = {
+        askpass = "";
+      };
+    };
   };
 
   home.file = {
