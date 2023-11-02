@@ -48,6 +48,10 @@ in
     ".ssh/config".source = ./.ssh/config;
     ".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
     ".julia/config/startup.jl".source = ./julia/startup.jl;
+    ".julia/environments/v1.9" = {
+      source = ./julia/environments/v1.9;
+      recursive = true;
+    };
     ".tmux.conf".source = ./tmux/tmux.conf;
   };
 
