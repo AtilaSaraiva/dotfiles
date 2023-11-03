@@ -4,6 +4,8 @@ if isinteractive()
     @eval using VimBindings
 end
 
+VimBindings.Config.system_clipboard!(true)
+
 function template()
     @eval begin
         using PkgTemplates
