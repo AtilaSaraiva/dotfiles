@@ -6,6 +6,11 @@ end
 
 VimBindings.Config.system_clipboard!(true)
 
+function inc(file::String)
+    Base.run(`clear`)
+    include(file)
+end
+
 function template()
     @eval begin
         using PkgTemplates
