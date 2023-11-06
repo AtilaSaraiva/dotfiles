@@ -11,6 +11,16 @@ function inc(file::String)
     include(file)
 end
 
+"""
+    converts a figure size in cm to pixels for Makie plotting
+"""
+function resolution_from_cm(x::Real, y::Real; dpi::Int=300)
+    cm_to_inches(x) = 0.3937007874*x
+    size_in_inches = Int.(round.(cm_to_inches.(size_in_cm)))
+    size_in_pixels = size_in_inches .* dpi
+    return size_in_pixels
+end
+
 function template()
     @eval begin
         using PkgTemplates
