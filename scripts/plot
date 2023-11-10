@@ -1,0 +1,2 @@
+module load scipy-stack
+python ~/.bin/src/plot.py
