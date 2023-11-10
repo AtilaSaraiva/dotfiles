@@ -11,7 +11,7 @@ rsync -r ./julia/environments/v1.9 ~/.julia/environments/
 
 # Vifm
 wget https://github.com/vifm/vifm/releases/download/v0.13/vifm-v0.13-x86_64.AppImage
-mkdir ~/.bin
+mkdir -p ~/.bin
 mv vifm-v0.13-x86_64.AppImage ~/.bin/vifm
 chmod +x ~/.bin/vifm
 mkdir -p ~/.config/vifm
@@ -19,17 +19,19 @@ rsync ./vifm/vifmrc ~/.config/vifm/
 
 # Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-mkdir ~/.bin
+mkdir -p ~/.bin
 mv nvim.appimage ~/.bin/nvim
 chmod +x ~/.bin/nvim
 rsync -r ./nvim ~/.config/
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Environment variables
 cp ./serverVars ~/
-if grep -Fxq "source serverVars" ~/.bashrc
+if grep -Fxq "source ~/serverVars" ~/.bashrc
 then
     echo "Not putting anything to the .bashrc file since it already has a source call"
 else
     cp ~/.bashrc ~/.bashrc.old
-    echo "source ~/.bashrc" >> ~/.bashrc
+    echo "source ~/serverVars" >> ~/.bashrc
 fi
