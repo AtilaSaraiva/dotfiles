@@ -4,10 +4,11 @@
 rsync ./tmux/tmux.conf ~/.tmux.conf
 
 # Julia
-mkdir -p ~/.julia/config
-mkdir -p ~/.julia/environments
-rsync ./julia/startup.jl ~/.julia/config/
-rsync -r ./julia/environments/v1.9 ~/.julia/environments/
+JULIA_DEPOT_PATH=~/projects/def-sacchi/saraivaq/.julia
+mkdir -p $JULIA_DEPOT_PATH/config
+mkdir -p $JULIA_DEPOT_PATH/environments
+rsync ./julia/startup.jl $JULIA_DEPOT_PATH/config/
+rsync -r ./julia/environments/v1.9 $JULIA_DEPOT_PATH/environments/
 
 # Vifm
 wget https://github.com/vifm/vifm/releases/download/v0.13/vifm-v0.13-x86_64.AppImage
@@ -18,10 +19,15 @@ mkdir -p ~/.config/vifm
 rsync ./vifm/vifmrc ~/.config/vifm/
 
 # Neovim
-wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+rm nvim-linux64.tar.gz
+mv nvim-linux64 ~/.bin/
 mkdir -p ~/.bin
-mv nvim.appimage ~/.bin/nvim
-chmod +x ~/.bin/nvim
+cd ~/.bin
+rm nvim
+ln -s nvim-linux64/bin/nvim .
+cd -
 rsync -r ./nvim ~/.config/
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
