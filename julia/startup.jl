@@ -1,10 +1,11 @@
-using OhMyREPL
-using Revise
 if isinteractive()
+    @eval using OhMyREPL
+    @eval using Revise
     @eval using VimBindings
+    VimBindings.Config.system_clipboard!(true)
+    @eval using Debugger, JuliaInterpreter, MethodAnalysis;
+    union!(JuliaInterpreter.compiled_modules, child_modules(Base));
 end
-
-VimBindings.Config.system_clipboard!(true)
 
 function inc(file::String)
     Base.run(`clear`)
@@ -41,8 +42,6 @@ function template()
     end
 end
 
-using Debugger, JuliaInterpreter, MethodAnalysis;
-union!(JuliaInterpreter.compiled_modules, child_modules(Base));
 
 if Base.isinteractive() &&
    (local REPL = get(Base.loaded_modules, Base.PkgId(Base.UUID("3fa0cd96-eef1-5676-8a61-b3b8758bbffb"), "REPL"), nothing); REPL !== nothing)

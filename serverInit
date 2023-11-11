@@ -4,7 +4,7 @@
 rsync ./tmux/tmux.conf ~/.tmux.conf
 
 # Julia
-JULIA_DEPOT_PATH="~/projects/def-sacchi/saraivaq/.julia"
+JULIA_DEPOT_PATH=~/projects/def-sacchi/saraivaq/.julia
 mkdir -p $JULIA_DEPOT_PATH/config
 mkdir -p $JULIA_DEPOT_PATH/environments
 rsync ./julia/startup.jl $JULIA_DEPOT_PATH/config/
