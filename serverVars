@@ -2,3 +2,4 @@ export JULIA_DEPOT_PATH=~/projects/def-sacchi/saraivaq/.julia
 alias proj="cd ~/projects/def-sacchi/saraivaq"
 PATH="$PATH:~/.bin"
 module load scipy-stack
+alias load="module load julia/1.9.3"
