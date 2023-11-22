@@ -55,27 +55,64 @@ in
     ".tmux.conf".source = ./tmux/tmux.conf;
   };
 
-  xdg.configFile = {
-    "vifm/vifmrc".source = ./vifm/vifmrc;
-    "sway/config".source = ./sway/config;
-    "qutebrowser/autoconfig.yml".source = "${dotfiles}/qutebrowser/autoconfig.yml";
-    "qutebrowser/quickmarks".source = "${dotfiles}/qutebrowser/quickmarks";
-    "qutebrowser/bookmarks/urls".source = "${dotfiles}/qutebrowser/bookmarks/urls";
-    "nvim/init.vim".source = ./nvim/init.vim;
-    "nvim/config" = {
-      source = ./nvim/config;
-      recursive = true;
+  xdg = {
+    configFile = {
+      "vifm/vifmrc".source = ./vifm/vifmrc;
+      "sway/config".source = ./sway/config;
+      "qutebrowser/autoconfig.yml".source = "${dotfiles}/qutebrowser/autoconfig.yml";
+      "qutebrowser/quickmarks".source = "${dotfiles}/qutebrowser/quickmarks";
+      "qutebrowser/bookmarks/urls".source = "${dotfiles}/qutebrowser/bookmarks/urls";
+      "nvim/init.vim".source = ./nvim/init.vim;
+      "nvim/config" = {
+        source = ./nvim/config;
+        recursive = true;
+      };
+      "mpv/mpv.conf".source = ./mpv/mpv.conf;
+      "zathura/zathurarc".source = ./zathura/zathurarc;
+      "kitty/kitty.conf".source = ./kitty/kitty.conf;
+      "waybar" = {
+        source = ./waybar;
+        recursive = true;
+      };
+      "lf" = {
+        source = ./lf;
+        recursive = true;
+      };
     };
-    "mpv/mpv.conf".source = ./mpv/mpv.conf;
-    "zathura/zathurarc".source = ./zathura/zathurarc;
-    "kitty/kitty.conf".source = ./kitty/kitty.conf;
-    "waybar" = {
-      source = ./waybar;
-      recursive = true;
-    };
-    "lf" = {
-      source = ./lf;
-      recursive = true;
+    mimeApps = {
+      enable=true;
+      defaultApplications = {
+        "text/html" = "org.qutebrowser.qutebrowser.desktop";
+        "text/plain" = "nvim.desktop";
+        "text/markdown" = "nvim.desktop";
+        "text/x-markdown" = "nvim.desktop";
+        "text/x-org" = "nvim.desktop";
+        "text/x-tex" = "nvim.desktop";
+        "text/x-c" = "nvim.desktop";
+        "text/x-c++" = "nvim.desktop";
+        "text/x-c++src" = "nvim.desktop";
+        "text/x-csrc" = "nvim.desktop";
+        "text/x-chdr" = "nvim.desktop";
+        "text/x-c++hdr" = "nvim.desktop";
+        "text/x-diff" = "nvim.desktop";
+        "text/x-python" = "nvim.desktop";
+        "text/x-shellscript" = "nvim.desktop";
+        "text/x-makefile" = "nvim.desktop";
+        "text/x-cmake" = "nvim.desktop";
+        "application/pdf" = "org.pwmt.zathura.desktop";
+        "application/epub+zip" = "org.pwmt.zathura.desktop";
+        "inode/mount-point" = "kitty-open.desktop";
+        "inode/directory" = "kitty-open.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "image/png" = "feh.desktop";
+        "image/jpeg" = "feh.desktop";
+        "application/x-extension-htm"="org.qutebrowser.qutebrowser.desktop";
+        "application/x-extension-html"="org.qutebrowser.qutebrowser.desktop";
+        "application/x-extension-shtml"="org.qutebrowser.qutebrowser.desktop";
+        "application/xhtml+xml"="org.qutebrowser.qutebrowser.desktop";
+        "application/x-extension-xhtml"="org.qutebrowser.qutebrowser.desktop";
+        "application/x-extension-xht"="org.qutebrowser.qutebrowser.desktop";
+      };
     };
   };
 
