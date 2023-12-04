@@ -85,7 +85,7 @@ bindsym $mod+t exec $term --class "dropdown_terminal" -e "zsh"
 
 # open vifm
 bindsym $mod+n exec kitty --class lf -e lf
-bindsym $mod+Shift+n exec kitty --class=anime vifm ~/Anime
+bindsym $mod+Shift+n exec kitty --class=notes vifm ~/Files/Mega/phd/notes
 
 # kill focused window
 bindsym $mod+Shift+q kill
