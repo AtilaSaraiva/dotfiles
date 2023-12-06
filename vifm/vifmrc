@@ -408,7 +408,7 @@ filextype */
 " uncommenting one of lines below will result in ignoring 'vi[x]cmd' option
 " for unknown file types.
 " For *nix:
-" filetype * xdg-open
+filetype * xdg-open
 " For OS X:
 " filetype * open
 " For Windows:
@@ -440,7 +440,7 @@ nnoremap ,f :!okular %c %i &<cr>" open pdf on okular
 nnoremap ,z :!okular %c %i &<cr>:rename<cr>" open pdf on okular
 nnoremap ,x :!xournalpp %c %i &<cr>" open pdf on xournalpp
 nnoremap ,r :!mcomix -w -f %c %i &<cr>" open image on mcomix
-nnoremap ,m :cd ~/mestrado/Códigos/LSRTM_GPU_proj/<cr>" open mestrado project folder
+nnoremap ,p :cd ~/Files/Mega/phd/<cr>" open phd project folder
 
 
 " Sample mappings
