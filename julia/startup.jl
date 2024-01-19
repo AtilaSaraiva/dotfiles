@@ -1,8 +1,6 @@
 if isinteractive()
     @eval using OhMyREPL
     @eval using Revise
-    @eval using VimBindings
-    VimBindings.Config.system_clipboard!(true)
     @eval using Debugger, JuliaInterpreter, MethodAnalysis;
     union!(JuliaInterpreter.compiled_modules, child_modules(Base));
 end
