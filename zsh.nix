@@ -19,9 +19,11 @@
     };
 
     history = {
+      save = 10000000;
       size = 10000000;
       share = true;
       ignoreSpace = true;
+      path = "${config.xdg.dataHome}/zsh/zsh_history";
     };
 
     oh-my-zsh = {
