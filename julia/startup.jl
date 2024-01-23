@@ -10,6 +10,14 @@ function inc(file::String)
     include(file)
 end
 
+function pluto()
+    @eval using Pluto
+    @eval Pluto.run(launch_browser=false,
+                    host=read(`tailscale ip --4`, String) |> strip |> string,
+                    require_secret_for_open_links=false,
+                    require_secret_for_access=false)
+end
+
 """
     converts a figure size in cm to pixels for Makie plotting
 """
