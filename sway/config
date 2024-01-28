@@ -456,8 +456,7 @@ for_window [app_id=".*"] inhibit_idle fullscreen
 set $oguriWallpaper $HOME/.bin/oguriWallpaper
 set $animatedWallpaper $HOME/.bin/animatedWallpaper
 bindsym --release $mod+i  exec $oguriWallpaper static
-bindsym $mod+Shift+dead_acute exec $oguriWallpaper static
-bindsym --release $mod+dead_acute exec $animatedWallpaper
+#bindsym --release $mod+dead_acute exec $animatedWallpaper
 set $wallpapers_path $HOME/Files/Imagens/Favoritos
 #output $mon0 bg `find $wallpapers_path -type f | shuf -n 1` fill
 #output $mon1 bg `find $wallpapers_path -type f | shuf -n 1` fill
@@ -724,8 +723,8 @@ input 16700:8455:Dell_Dell_USB_Entry_Keyboard {
 }
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout us,us
-    xkb_variant intl,dvp
-    xkb_options caps:swapescape,grp:alts_toggle
+    xkb_variant altgr-intl,dvp
+    xkb_options caps:swapescape
 }
 input 1386:890:Wacom_One_by_Wacom_S_Pen {
     #left_handed "enabled"
