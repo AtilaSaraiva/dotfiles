@@ -46,6 +46,7 @@ in
 
   home.file = {
     ".ssh/config".source = ./.ssh/config;
+    ".jupyter/jupyter_notebook_config.py".source = ./jupyter/jupyter_notebook_config.py;
     ".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
     ".julia/config/startup.jl".source = ./julia/startup.jl;
     ".julia/environments" = {
