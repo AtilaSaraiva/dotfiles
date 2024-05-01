@@ -116,5 +116,7 @@ settings:
       tosho: https://animetosho.org/search?q={}
       track: https://nixpk.gs/pr-tracker.html?pr={}
       yt: https://www.youtube.com/results?search_q:uery={}
+      epl: https://epl.bibliocommons.com/v2/search?query={}&searchType=smart
+      gstop: https://www.gamestop.ca/SearchResult/QuickSearch?q={}
   zoom.default:
     global: '120'
