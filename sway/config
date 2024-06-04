@@ -732,3 +732,7 @@ input 1386:890:Wacom_One_by_Wacom_S_Pen {
 input type:touchpad {
     tap "enabled"
 }
+
+output DP-1 {
+  subpixel rgb
+}
